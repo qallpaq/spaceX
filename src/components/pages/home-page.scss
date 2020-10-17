@@ -1,0 +1,28 @@
+.home-page {
+    background: url('../images/photo-1541185933-ef5d8ed016c2.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.75);
+}
+
+.home-page__title {
+    padding: 15px;
+    color: #fff;
+    background-color: rgb(9%, 25%, 40%, .5);
+    animation: migulyacia 5s ease infinite;
+}
+
+@keyframes migulyacia {
+    0% {
+        text-shadow: white 0 0 0;
+    }
+    50% {
+        text-shadow: white 0 0 5px;
+    }
+    100% {
+        text-shadow: white 0 0 0;
+    }
+}

@@ -2,7 +2,8 @@ const initialState = {
     rockets: [],
     rocketDetails: [],
     ships: [],
-    shipsDetails: []
+    shipsDetails: [],
+    isFetching: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 shipsDetails: action.payload
+            }
+        case 'TOGGLE_IS_FETCHING':
+            return {
+                ...state,
+                isFetching: action.payload
             }
         default:
             return state;

@@ -17,7 +17,7 @@ const RocketItem = ({rocket, history}) => {
                 <div className='rocket__item-row'><span>STAGES:</span> {rocket.stages}</div>
                 <div className='btn-wrapper'>
                     <button
-                        className='btn btn-info'
+                        className='btn-rocket'
                         onClick={(id) => history.push(`/rockets/${rocket.id}`)}>
                         View Details
                     </button>

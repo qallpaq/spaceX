@@ -1,3 +1,3 @@
-import ShipsList from "./ship-list-containerr";
+import ShipsList from "./ship-list-container";
 
 export default ShipsList;

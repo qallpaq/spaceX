@@ -1,7 +1,7 @@
 import React from "react";
 import './header.scss';
 import {Link} from "react-router-dom";
-import logo from './SpaceX-Logo.svg';
+import logo from '../images/SpaceX-Logo.svg';
 
 
 const Header = () => {

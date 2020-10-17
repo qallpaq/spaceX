@@ -1,5 +1,5 @@
 import React from "react";
-import ShipsListContainer from "../ships-list/ship-list-containerr";
+import ShipsListContainer from "../ships-list/ship-list-container";
 
 
 const ShipsPage = () => {
