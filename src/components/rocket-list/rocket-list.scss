@@ -1,0 +1,21 @@
+.rocket-list {
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 0px 86px -46px rgba(0, 0, 0, 0.75);
+}
+
+.animation-active {
+    animation-name: transrow;
+    animation-duration: .2s;
+}
+
+@keyframes transrow {
+    0% {
+        opacity: 0;
+        transform: translate(1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
