@@ -15,6 +15,7 @@
     width: 30%;
     height: 220px;
     flex-shrink: 0;
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
 }
 
 .rocket__img {
@@ -41,5 +42,35 @@
     &:hover {
         color: #343a40 !important;;
         background: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rocket-img-wrapper {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .rocket-img-wrapper {
+        width: 40%;
+        height: 150px;
+    }
+
+    .rocket__item-info {
+        width: 55%;
+    }
+
+    .rocket__item {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .rocket__item {
+        font-size: 12px;
+    }
+    .rocket-img-wrapper {
+        height: 120px;
     }
 }

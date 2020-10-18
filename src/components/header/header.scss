@@ -1,6 +1,6 @@
 .space-x-logo {
-    width: 110px;
-    height: 90px;
+    margin-left: 100px;
+    width: 200px;
 }
 
 .header-link {
@@ -10,4 +10,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .space-x-logo {
+        width: 130px;
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-link {
+        width: 60px;
+    }
+
+    .space-x-logo {
+        width: 110px;
+        margin-left: 50px;
+    }
 }

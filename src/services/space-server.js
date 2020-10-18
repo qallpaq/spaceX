@@ -33,7 +33,7 @@ export default class SpaceServer {
 
     getAllShips = async () => {
         const allShips = await this.getResource(`/ships/`);
-        return allShips.slice(4, 10);
+        return allShips.slice(4);
     };
 
     getShip = async (id) => {

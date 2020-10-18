@@ -15,6 +15,23 @@
     animation: migulyacia 5s ease infinite;
 }
 
+@media screen and (max-width: 768px) {
+    .home-page__title {
+        font-size: 32px;
+    }
+    .home-page {
+        box-shadow: 10px 10px 44px -12px rgba(0,0,0,0.75);
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .home-page__title {
+        font-size: 25px;
+    }
+}
+
+
+
 @keyframes migulyacia {
     0% {
         text-shadow: white 0 0 0;
