@@ -1,18 +1,11 @@
 .rocket-list {
     width: 100%;
     padding: 15px;
-    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.75);
 }
 
 .animation-active {
     animation-name: transrow;
     animation-duration: .2s;
-}
-
-@media screen and (max-width: 768px) {
-    .rocket-list {
-        box-shadow: 10px 10px 44px -12px rgba(0,0,0,0.75);
-    }
 }
 
 @keyframes transrow {

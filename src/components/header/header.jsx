@@ -8,23 +8,25 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar navbar-dark bg-dark">
-                <li className='header-link'>
-                    <Link to='/'>
-                        <img className='space-x-logo' src={logo} alt="logo"/>
-                    </Link>
-                </li>
+                <div className='container'>
+                    <li className='header-link'>
+                        <Link to='/'>
+                            <img className='space-x-logo' src={logo} alt="logo"/>
+                        </Link>
+                    </li>
 
-                <li className='header-link'>
-                    <Link to='/rockets/'>
-                        ROCKETS
-                    </Link>
-                </li>
+                    <li className='header-link'>
+                        <Link to='/rockets/'>
+                            ROCKETS
+                        </Link>
+                    </li>
 
-                <li className='header-link'>
-                    <Link to='/ships/'>
-                        SHIPS
-                    </Link>
-                </li>
+                    <li className='header-link'>
+                        <Link to='/ships/'>
+                            SHIPS
+                        </Link>
+                    </li>
+                </div>
             </nav>
         </header>
     );

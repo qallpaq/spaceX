@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import './ship-details.scss';
 import {useSpace} from "../space-context/space-context";
 import {connect} from "react-redux";
 import {shipDetailsLoaded, toggleIsFetching} from "../../actions";

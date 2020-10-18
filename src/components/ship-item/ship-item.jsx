@@ -11,7 +11,7 @@ const ShipItem = ({ship, history}) => {
             </div>
 
             <div className='ship__item-row'>
-                <i>{ship.ship_name}</i>
+                <h1 className='ship__item-name'><i>{ship.ship_name}</i></h1>
             </div>
 
             <div className='btn-wrapper'>

@@ -15,7 +15,6 @@
     width: 30%;
     height: 220px;
     flex-shrink: 0;
-    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
 }
 
 .rocket__img {
@@ -64,12 +63,22 @@
     .rocket__item {
         font-size: 13px;
     }
+
+    .rocket-details__name {
+        font-size: 20px;
+    }
+
+    .btn-rocket {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
 }
 
 @media screen and (max-width: 380px) {
     .rocket__item {
         font-size: 12px;
     }
+
     .rocket-img-wrapper {
         height: 120px;
     }

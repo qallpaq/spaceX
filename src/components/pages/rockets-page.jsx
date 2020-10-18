@@ -4,7 +4,9 @@ import RocketsListContainer from "../rocket-list/rocket-list-container";
 
 const RocketsPage = () => {
     return (
-        <RocketsListContainer />
+        <div className='container'>
+            <RocketsListContainer />
+        </div>
     );
 };
 
