@@ -18,17 +18,7 @@ export default class SpaceServer {
 
     getRocket = async (id) => {
         const rocket = await this.getResource(`/rockets/`);
-        return rocket[id];
-    };
-
-    getAllDragons = async () => {
-        const allDragons = await this.getResource(`/dragons/`);
-        return allDragons;
-    };
-
-    getDragon = async (id) => {
-        const dragon = await this.getResource(`/dragons/`);
-        return dragon[id];
+        return rocket[id - 1];
     };
 
     getAllShips = async () => {

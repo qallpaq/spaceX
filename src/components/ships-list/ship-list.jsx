@@ -1,6 +1,7 @@
 import ShipItem from "../ship-item";
 import React from "react";
 import './ship-list.scss';
+import {connect} from "react-redux";
 
 
 const ShipList = ({ships}) => {
@@ -21,4 +22,8 @@ const ShipList = ({ships}) => {
     );
 };
 
-export default ShipList;
+const mapStateToProps = ({ships}) => {
+    return {ships}
+};
+
+export default connect(mapStateToProps)(ShipList);

@@ -1,17 +1,26 @@
-li {
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Teko', sans-serif;
+}
+
+a, ul, li {
+    text-decoration: none;
+    padding: 0;
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-* {
-    font-family: 'Teko', sans-serif;
+button:focus, input:focus {
+    outline: none;
+    cursor: pointer;
 }
 
 .app {

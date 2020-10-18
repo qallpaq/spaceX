@@ -7,15 +7,15 @@ import ShipList from "./ship-list";
 import Spinner from "../spinner";
 
 
-const ShipsListContainer = ({ships, shipsLoaded, isFetching, toggleIsFetching}) => {
+const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
         toggleIsFetching(true)
         spaceX.getAllShips()
             .then((ships) => {
-                toggleIsFetching(false)
                 shipsLoaded(ships)
+                toggleIsFetching(false)
             })
     }, []);
 
@@ -23,11 +23,12 @@ const ShipsListContainer = ({ships, shipsLoaded, isFetching, toggleIsFetching}) 
         return <Spinner/>
     }
 
-    return <ShipList ships={ships}/>
+    return <ShipList/>
 };
 
-const mapStateToProps = ({ships, isFetching}) => {
-    return {ships, isFetching}
+
+const mapStateToProps = ({isFetching}) => {
+    return {isFetching}
 };
 
 const mapDispatchToProps = {
