@@ -31,7 +31,7 @@ const ShipDetails = ({shipsDetails}) => {
     );
 };
 
-const mapStateToProps = ({shipsDetails}) => {
+const mapStateToProps = ({ships: {shipsDetails}}) => {
     return {shipsDetails}
 };
 

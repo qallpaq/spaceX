@@ -27,7 +27,7 @@ const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentP
 };
 
 
-const mapStateToProps = ({isFetching, pageSize, currentPage}) => {
+const mapStateToProps = ({basic: {isFetching}, ships: {pageSize, currentPage}}) => {
     return {isFetching, pageSize, currentPage}
 };
 

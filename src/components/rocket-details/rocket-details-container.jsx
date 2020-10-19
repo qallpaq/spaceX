@@ -27,7 +27,7 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
 };
 
 
-const mapStateToProps = ({isFetching}) => {
+const mapStateToProps = ({basic: {isFetching}}) => {
     return {isFetching}
 };
 

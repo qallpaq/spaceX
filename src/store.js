@@ -1,13 +1,15 @@
 import {createStore} from "redux";
-import reducer from "./reducers";
+import {combineReducers} from "redux";
+import {basicReducer, rocketsReducer, shipsReducer} from "./reducers";
 
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(combineReducers({
+    basic: basicReducer,
+    rockets: rocketsReducer,
+    ships: shipsReducer
+}));
 
 export default store;
-
-
-
 
 
 window.store = store;

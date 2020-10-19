@@ -12,7 +12,8 @@ const RocketDetails = ({rocketDetails}) => {
             <div className='rocket-details animation-active'>
                 <div className='rocket-details__info'>
                     <div className='rocket-details__row'><h1 className='rocket-details__name'>{rocket_name}</h1></div>
-                    <div className='rocket-details__row rocket-details__row_description'><span>description:</span> {description}</div>
+                    <div className='rocket-details__row rocket-details__row_description'>
+                        <span>description:</span> {description}</div>
                     <div className='rocket-details__row'><span>active:</span> {isActive}</div>
                     <div className='rocket-details__row'><span>stages:</span> {stages}</div>
                     <div className='rocket-details__row'><span>boosters:</span> {boosters}</div>
@@ -33,7 +34,7 @@ const RocketDetails = ({rocketDetails}) => {
 };
 
 
-const mapStateToProps = ({rocketDetails}) => {
+const mapStateToProps = ({rockets: {rocketDetails}}) => {
     return {rocketDetails}
 };
 

@@ -25,7 +25,7 @@ const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetchi
     return <ShipDetails/>
 };
 
-const mapStateToProps = ({isFetching}) => {
+const mapStateToProps = ({basic: {isFetching}}) => {
     return {isFetching}
 };
 

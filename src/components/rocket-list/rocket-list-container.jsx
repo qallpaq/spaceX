@@ -11,7 +11,6 @@ const RocketsListContainer = ({rocketsLoaded, isFetching, toggleIsFetching}) => 
 
     useEffect(() => {
         toggleIsFetching(true)
-        console.log('rocket-list-container render')
         spaceX.getAllRockets()
             .then(res => {
                 rocketsLoaded(res);
@@ -27,7 +26,7 @@ const RocketsListContainer = ({rocketsLoaded, isFetching, toggleIsFetching}) => 
 };
 
 
-const mapStateToProps = ({isFetching}) => {
+const mapStateToProps = ({basic: {isFetching}}) => {
     return {isFetching};
 };
 

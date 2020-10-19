@@ -37,7 +37,7 @@ const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage}) => {
 };
 
 
-const mapStateToProps = ({ships, totalShipsCount, pageSize, currentPage}) => {
+const mapStateToProps = ({ships: {ships, totalShipsCount, pageSize, currentPage}}) => {
     return {ships, totalShipsCount, pageSize, currentPage}
 };
 

@@ -21,7 +21,7 @@ const RocketsList = ({rockets}) => {
 };
 
 
-const mapStateToProps = ({rockets}) => {
+const mapStateToProps = ({rockets:{rockets}}) => {
     return {rockets}
 };
 
