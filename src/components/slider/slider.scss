@@ -42,3 +42,13 @@
     right: 0;
     @extend %btn-styles;
 }
+
+@media screen and (max-width: 575px) {
+    .slider {
+        height: 60vh;
+    }
+
+    %btn-styles {
+        background: none;
+    }
+}

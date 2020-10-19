@@ -1,11 +1,12 @@
 import React from "react";
 import './rocket-item.scss';
 import {Link} from "react-router-dom";
+import {withRouter} from "react-router";
 
 
-const RocketItem = ({rocket}) => {
+const RocketItem = ({rocket, history}) => {
     return (
-        <div className='rocket__item'>
+        <div className='rocket__item' onClick={() => history.push(`/rockets/${rocket.id}`)}>
             <div className='rocket-img-wrapper'>
                 <img className='rocket__img' src={rocket.flickr_images[1]} alt="rocket"/>
             </div>
@@ -26,4 +27,4 @@ const RocketItem = ({rocket}) => {
 };
 
 
-export default RocketItem;
+export default withRouter(RocketItem);

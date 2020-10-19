@@ -4,7 +4,14 @@
     width: 100%;
     margin-bottom: 20px;
     padding: 15px;
+    transition: .2s;
     box-shadow: 0px 0px 86px -46px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.75);
+        transform: scale(1.01);
+    }
 
     span {
         text-transform: uppercase;
