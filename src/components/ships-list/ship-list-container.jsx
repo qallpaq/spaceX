@@ -7,17 +7,17 @@ import ShipList from "./ship-list";
 import Spinner from "../spinner";
 
 
-const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching}) => {
+const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentPage}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
         toggleIsFetching(true)
-        spaceX.getAllShips()
+        spaceX.getAllShips(currentPage)
             .then((ships) => {
                 shipsLoaded(ships)
                 toggleIsFetching(false)
             })
-    }, []);
+    }, [currentPage]);
 
     if (isFetching) {
         return <Spinner/>
@@ -27,8 +27,8 @@ const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching}) => {
 };
 
 
-const mapStateToProps = ({isFetching}) => {
-    return {isFetching}
+const mapStateToProps = ({isFetching, pageSize, currentPage}) => {
+    return {isFetching, pageSize, currentPage}
 };
 
 const mapDispatchToProps = {

@@ -2,20 +2,25 @@ import ShipItem from "../ship-item";
 import React from "react";
 import './ship-list.scss';
 import {connect} from "react-redux";
+import {setPage} from "../../actions";
 
 
-const ShipList = ({ships}) => {
+const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage}) => {
 
-    const buttonsCount = Math.round(ships.length / 4);
-    const arrayOfButtons = [];
-
-    for (let i = 1; i <= buttonsCount; i++) {
-        arrayOfButtons.push(i)
+    const arrayOfButtons = Math.ceil(totalShipsCount / pageSize);
+    const pages = [];
+    for (let i = 1; i <= arrayOfButtons; i++) {
+        pages.push(i)
     }
 
     return (
         <div className='container'>
-            {arrayOfButtons.map((el) => <button key={el}>{el}</button>)}
+            <div className='ship-list__pages'>
+                {pages.map((el, idx) => {
+                    return <button className={`ship-list__pages-btn ${el === currentPage && 'active'}`} key={idx}
+                                 onClick={() => setPage(el)}>{el}</button>
+                })}
+            </div>
             <ul className='ship-list animation-active'>
                 {
                     ships.map((ship) => {
@@ -31,8 +36,13 @@ const ShipList = ({ships}) => {
     );
 };
 
-const mapStateToProps = ({ships}) => {
-    return {ships}
+
+const mapStateToProps = ({ships, totalShipsCount, pageSize, currentPage}) => {
+    return {ships, totalShipsCount, pageSize, currentPage}
 };
 
-export default connect(mapStateToProps)(ShipList);
+const mapDispatchToProps = {
+    setPage
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShipList);

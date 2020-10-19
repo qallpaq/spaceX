@@ -2,6 +2,9 @@ const initialState = {
     rockets: [],
     rocketDetails: [],
     ships: [],
+    pageSize: 5,
+    totalShipsCount: 19,
+    currentPage: 1,
     shipsDetails: [],
     isFetching: true,
 };
@@ -32,6 +35,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: action.payload
+            }
+        case 'SET_PAGE':
+            return {
+                ...state,
+                currentPage: action.payload
             }
         default:
             return state;

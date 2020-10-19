@@ -4,3 +4,30 @@
     justify-content: space-between;
     padding: 15px;
 }
+
+.ship-list__pages {
+    margin: 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ship-list__pages-btn {
+    padding: 15px;
+    transition: .2s;
+    background-color: #fff;
+    border: 2px solid #fff;
+
+    &:hover {
+        font-size: 20px;
+        border: 2px solid #a19c9c;
+    }
+
+    &.active {
+        font-size: 20px;
+        background-color: #a19c9c;
+        border: 2px solid #fff;
+    }
+}
