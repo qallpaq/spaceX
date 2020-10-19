@@ -11,9 +11,9 @@ const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetchi
 
     useEffect(() => {
         toggleIsFetching(true);
-        spaceX.getAllShips()
+        spaceX.getShip(id)
             .then(ship => {
-                shipDetailsLoaded(ship.find(el => el.ship_id === id))
+                shipDetailsLoaded(ship)
                 toggleIsFetching(false)
             })
     }, []);

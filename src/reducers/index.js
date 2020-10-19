@@ -3,7 +3,7 @@ const initialState = {
     rocketDetails: [],
     ships: [],
     shipsDetails: [],
-    isFetching: false
+    isFetching: true,
 };
 
 const reducer = (state = initialState, action) => {

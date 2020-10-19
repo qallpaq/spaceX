@@ -1,9 +1,9 @@
 import React from "react";
 import './ship-item.scss';
-import {withRouter} from "react-router";
+import {Link} from "react-router-dom";
 
 
-const ShipItem = ({ship, history}) => {
+const ShipItem = ({ship}) => {
     return (
         <>
             <div className="ship__img-wrapper">
@@ -15,14 +15,12 @@ const ShipItem = ({ship, history}) => {
             </div>
 
             <div className='btn-wrapper'>
-                <button
-                    className='btn-ship'
-                    onClick={(id) => history.push(`/ships/${ship.ship_id}`)}>
-                    View Details
+                <button className='btn-ship'>
+                    <Link to={`/ships/${ship.ship_id}`}>View Details</Link>
                 </button>
             </div>
         </>
     );
 };
 
-export default withRouter(ShipItem);
+export default ShipItem;

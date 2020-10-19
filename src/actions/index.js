@@ -9,5 +9,5 @@ export {
     rocketDetailsLoaded,
     shipsLoaded,
     shipDetailsLoaded,
-    toggleIsFetching
+    toggleIsFetching,
 }

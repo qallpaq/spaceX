@@ -11,13 +11,13 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
 
     useEffect(() => {
         toggleIsFetching(true)
+        console.log('rocket-details-container render')
         spaceX.getRocket(id)
             .then(rocket => {
                 rocketDetailsLoaded(rocket);
                 toggleIsFetching(false)
             })
-        console.log('rocket-details-container render')
-    }, [id]);
+    }, []);
 
     if (isFetching) {
         return <Spinner/>

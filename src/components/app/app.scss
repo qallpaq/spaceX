@@ -18,6 +18,10 @@ a, ul, li {
     list-style: none;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 button:focus, input:focus {
     outline: none;
     cursor: pointer;

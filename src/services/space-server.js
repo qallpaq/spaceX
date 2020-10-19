@@ -23,11 +23,11 @@ export default class SpaceServer {
 
     getAllShips = async () => {
         const allShips = await this.getResource(`/ships/`);
-        return allShips.slice(4);
+        return allShips.filter((el) => el.image !== null);
     };
 
     getShip = async (id) => {
-        const ship = await this.getResource(`/ships/${id}`);
-        return ship;
+        const ship = await this.getResource(`/ships/`);
+        return ship.find(el => el.ship_id === id);
     };
 };

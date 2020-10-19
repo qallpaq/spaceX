@@ -20,6 +20,7 @@ const RocketsList = ({rockets}) => {
     );
 };
 
+
 const mapStateToProps = ({rockets}) => {
     return {rockets}
 };

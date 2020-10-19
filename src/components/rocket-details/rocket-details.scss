@@ -21,6 +21,14 @@
     margin-bottom: 20px;
 }
 
+.rocket-details__name {
+    font-size: 35px;
+}
+
+.rocket-details__row_description {
+    font-size: 25px;
+}
+
 .rocket-details__row {
     margin-bottom: 10px;
     span {
@@ -35,6 +43,10 @@
 
     .rocket-details__img-wrapper {
         height: 400px;
+    }
+
+    .rocket-details__row_description {
+        font-size: 18px;
     }
 
     .rocket-details__row {
