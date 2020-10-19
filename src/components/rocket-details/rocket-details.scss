@@ -3,17 +3,6 @@
     padding: 15px;
 }
 
-.rocket-details__img-wrapper {
-    margin: 0 auto 20px;
-    width: 100%;
-    height: 500px;
-}
-
-.rocket-details__img {
-    width: 100%;
-    height: 100%;
-}
-
 .rocket-details__info {
     padding: 15px;
     background-color: #343a40;
@@ -23,6 +12,7 @@
 
 .rocket-details__name {
     font-size: 35px;
+    text-align: center;
 }
 
 .rocket-details__row_description {
@@ -31,6 +21,7 @@
 
 .rocket-details__row {
     margin-bottom: 10px;
+
     span {
         text-transform: uppercase;
     }
@@ -41,21 +32,11 @@
         font-size: 15px;
     }
 
-    .rocket-details__img-wrapper {
-        height: 400px;
-    }
-
     .rocket-details__row_description {
         font-size: 18px;
     }
 
     .rocket-details__row {
         margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .rocket-details__img-wrapper {
-        height: 250px;
     }
 }

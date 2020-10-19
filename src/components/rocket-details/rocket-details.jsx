@@ -1,6 +1,7 @@
 import React from "react";
 import './rocket-details.scss';
 import {connect} from "react-redux";
+import Slider from "../slider/slider";
 
 
 const RocketDetails = ({rocketDetails}) => {
@@ -10,8 +11,11 @@ const RocketDetails = ({rocketDetails}) => {
     return (
         <div className='container'>
             <div className='rocket-details animation-active'>
+                <div className='rocket-details__row'><h1 className='rocket-details__name'>{rocket_name}</h1></div>
+
+                <Slider array={flickr_images}/>
+
                 <div className='rocket-details__info'>
-                    <div className='rocket-details__row'><h1 className='rocket-details__name'>{rocket_name}</h1></div>
                     <div className='rocket-details__row rocket-details__row_description'>
                         <span>description:</span> {description}</div>
                     <div className='rocket-details__row'><span>active:</span> {isActive}</div>
@@ -19,15 +23,6 @@ const RocketDetails = ({rocketDetails}) => {
                     <div className='rocket-details__row'><span>boosters:</span> {boosters}</div>
                     <div className='rocket-details__row'><span>first flight:</span> {first_flight}</div>
                 </div>
-                {
-                    flickr_images.map((el, idx) => {
-                        return (
-                            <div className='rocket-details__img-wrapper' key={idx}>
-                                <img className='rocket-details__img' src={el} alt="rocket"/>
-                            </div>
-                        )
-                    })
-                }
             </div>
         </div>
     );
