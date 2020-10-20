@@ -1,7 +1,7 @@
 import React from "react";
 import './rocket-details.scss';
 import {connect} from "react-redux";
-import Slider from "../slider/slider";
+import SlickSlider from "../slick-slider/slick-slider";
 
 
 const RocketDetails = ({rocketDetails}) => {
@@ -13,7 +13,7 @@ const RocketDetails = ({rocketDetails}) => {
             <div className='rocket-details animation-active'>
                 <div className='rocket-details__row'><h1 className='rocket-details__name'>{rocket_name}</h1></div>
 
-                <Slider array={flickr_images}/>
+                <SlickSlider arr={flickr_images} />
 
                 <div className='rocket-details__info'>
                     <div className='rocket-details__row rocket-details__row_description'>
