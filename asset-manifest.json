@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/spaceX/static/css/main.df1456b7.chunk.css",
-    "main.js": "/spaceX/static/js/main.451a7418.chunk.js",
-    "main.js.map": "/spaceX/static/js/main.451a7418.chunk.js.map",
+    "main.css": "/spaceX/static/css/main.7ec10ed1.chunk.css",
+    "main.js": "/spaceX/static/js/main.c3feef29.chunk.js",
+    "main.js.map": "/spaceX/static/js/main.c3feef29.chunk.js.map",
     "runtime-main.js": "/spaceX/static/js/runtime-main.13750f96.js",
     "runtime-main.js.map": "/spaceX/static/js/runtime-main.13750f96.js.map",
-    "static/js/2.4219d6ed.chunk.js": "/spaceX/static/js/2.4219d6ed.chunk.js",
-    "static/js/2.4219d6ed.chunk.js.map": "/spaceX/static/js/2.4219d6ed.chunk.js.map",
+    "static/css/2.1216cd76.chunk.css": "/spaceX/static/css/2.1216cd76.chunk.css",
+    "static/js/2.81d5c244.chunk.js": "/spaceX/static/js/2.81d5c244.chunk.js",
+    "static/js/2.81d5c244.chunk.js.map": "/spaceX/static/js/2.81d5c244.chunk.js.map",
     "index.html": "/spaceX/index.html",
-    "precache-manifest.344b7ee0038d02c7317fc2f223f0ad89.js": "/spaceX/precache-manifest.344b7ee0038d02c7317fc2f223f0ad89.js",
+    "precache-manifest.601dbf3c9e5bcb0f30bb6b0dfd343704.js": "/spaceX/precache-manifest.601dbf3c9e5bcb0f30bb6b0dfd343704.js",
     "service-worker.js": "/spaceX/service-worker.js",
-    "static/css/main.df1456b7.chunk.css.map": "/spaceX/static/css/main.df1456b7.chunk.css.map",
-    "static/js/2.4219d6ed.chunk.js.LICENSE.txt": "/spaceX/static/js/2.4219d6ed.chunk.js.LICENSE.txt",
+    "static/css/2.1216cd76.chunk.css.map": "/spaceX/static/css/2.1216cd76.chunk.css.map",
+    "static/css/main.7ec10ed1.chunk.css.map": "/spaceX/static/css/main.7ec10ed1.chunk.css.map",
+    "static/js/2.81d5c244.chunk.js.LICENSE.txt": "/spaceX/static/js/2.81d5c244.chunk.js.LICENSE.txt",
     "static/media/SpaceX-Logo.svg": "/spaceX/static/media/SpaceX-Logo.6ff54c0f.svg",
-    "static/media/home-page.scss": "/spaceX/static/media/photo-1541185933-ef5d8ed016c2.4398c5c2.jpg"
+    "static/media/home-page.scss": "/spaceX/static/media/photo-1541185933-ef5d8ed016c2.4398c5c2.jpg",
+    "static/media/slick-theme.css": "/spaceX/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.13750f96.js",
-    "static/js/2.4219d6ed.chunk.js",
-    "static/css/main.df1456b7.chunk.css",
-    "static/js/main.451a7418.chunk.js"
+    "static/css/2.1216cd76.chunk.css",
+    "static/js/2.81d5c244.chunk.js",
+    "static/css/main.7ec10ed1.chunk.css",
+    "static/js/main.c3feef29.chunk.js"
   ]
 }
