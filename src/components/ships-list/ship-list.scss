@@ -14,10 +14,28 @@
     align-items: center;
 }
 
+.btn-ship {
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-transform: uppercase;
+    transition: .4s;
+    background: #ffffff;
+
+    a {
+        font-size: 25px;
+    }
+}
+
 .ship-list__item {
     width: 48%;
     border: 3px solid rgba(70, 109, 252, 0.3);
-    border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
     position: relative;
@@ -34,7 +52,6 @@
             animation-name: animationbackground;
             animation-duration: .4s;
             animation-fill-mode: forwards;
-            border-radius: 10px;
         }
 
         .btn-ship {

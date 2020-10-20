@@ -9,27 +9,33 @@ const HeaderMenuMobile = ({menu, changeTheme, closeMenu}) => {
     return (
         <div className={`header-menu-mobile ${menu && 'active'}`}>
             <div className="container">
-                <ul>
-                    <li className='header-link-mobile' onClick={closeMenu}>
+                <ul className='header__links-mobile'
+                    onClick={(e) => {
+                        if (e.target.classList.contains('header-link-mobile__item')) {
+                            closeMenu();
+                        }
+                    }}>
+
+                    <li className='header-link-mobile'>
                         <Link to='/'>
-                            HOME
+                            <span className='header-link-mobile__item'>HOME</span>
                         </Link>
                     </li>
 
-                    <li className='header-link-mobile' onClick={closeMenu}>
+                    <li className='header-link-mobile'>
                         <Link to='/rockets/'>
-                            ROCKETS
+                            <span className='header-link-mobile__item'>ROCKETS</span>
                         </Link>
                     </li>
 
-                    <li className='header-link-mobile' onClick={closeMenu}>
+                    <li className='header-link-mobile'>
                         <Link to='/ships/'>
-                            SHIPS
+                            <span className='header-link-mobile__item'>SHIPS</span>
                         </Link>
                     </li>
 
                     <li className='header-link header-link-mobile header-link-theme' onClick={() => changeTheme()}>
-                        change theme
+                        <span className='header-link-mobile__item'>change theme</span>
                     </li>
                 </ul>
             </div>
