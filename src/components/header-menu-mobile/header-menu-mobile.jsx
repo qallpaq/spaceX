@@ -5,24 +5,24 @@ import {connect} from "react-redux";
 import {changeTheme} from "../../actions";
 
 
-const HeaderMenuMobile = ({menu, changeTheme}) => {
+const HeaderMenuMobile = ({menu, changeTheme, closeMenu}) => {
     return (
         <div className={`header-menu-mobile ${menu && 'active'}`}>
             <div className="container">
                 <ul>
-                    <li className='header-link-mobile'>
+                    <li className='header-link-mobile' onClick={closeMenu}>
                         <Link to='/'>
                             HOME
                         </Link>
                     </li>
 
-                    <li className='header-link-mobile'>
+                    <li className='header-link-mobile' onClick={closeMenu}>
                         <Link to='/rockets/'>
                             ROCKETS
                         </Link>
                     </li>
 
-                    <li className='header-link-mobile'>
+                    <li className='header-link-mobile' onClick={closeMenu}>
                         <Link to='/ships/'>
                             SHIPS
                         </Link>

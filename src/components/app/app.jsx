@@ -11,7 +11,7 @@ import {connect} from "react-redux";
 
 const App = ({defaultTheme}) => {
     const blackTheme = {
-        background: 'black',
+        background: '#333',
         color: 'white'
     };
 

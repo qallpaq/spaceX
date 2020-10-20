@@ -10,6 +10,10 @@ import {connect} from "react-redux";
 const Header = ({changeTheme}) => {
     const [menu, setMenu] = useState(false);
 
+    const closeMenu = () => {
+        return setMenu(false)
+    };
+
     return (
         <header>
             <nav className="navbar navbar-dark bg-dark">
@@ -41,7 +45,7 @@ const Header = ({changeTheme}) => {
                         </span>
                     </div>
 
-                    <HeaderMenuMobile menu={menu}/>
+                    <HeaderMenuMobile menu={menu} closeMenu={closeMenu}/>
                 </div>
             </nav>
         </header>

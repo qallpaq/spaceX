@@ -6,15 +6,15 @@ import RocketsList from "./rocket-list";
 import Spinner from "../spinner";
 
 
-const RocketsListContainer = ({rocketsLoaded, isFetching, rockets}) => {
+const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetching}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
-        toggleIsFetching(true)
+        toggleIsFetching(true);
         spaceX.getAllRockets()
             .then(res => {
                 rocketsLoaded(res);
-                toggleIsFetching(false)
+                toggleIsFetching(false);
             })
     }, []);
 
