@@ -8,7 +8,7 @@ const RocketsList = ({rockets}) => {
     return (
         <ul className='rocket-list animation-active'>
             {
-                rockets.map((rocket) => {
+                rockets.reverse().map((rocket) => {
                     return (
                         <li className='rocket-list__item' key={rocket.id}>
                             <RocketItem rocket={rocket}/>
