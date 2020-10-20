@@ -33,6 +33,38 @@
     }
 }
 
+.slider-dots {
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    & button {
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
+.slider__dot {
+    font-size: 0;
+    border-radius: 99%;
+    transition: .2s;
+
+    &.active {
+        transform: scale(1.2);
+        background-color: #343a40;
+
+        &:hover {
+            background-color: #343a40;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.2);
+        background-color: #908f8f;
+    }
+}
+
 #goLeft {
     left: 0;
     @extend %btn-styles;
