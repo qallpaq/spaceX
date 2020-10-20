@@ -29,7 +29,8 @@
 
 .ship-list__item {
     width: 48%;
-    box-shadow: 0px 0px 86px -46px rgba(0, 0, 0, 0.75);
+    border: 3px solid rgba(70, 109, 252, 0.3);
+    border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
     position: relative;
@@ -38,13 +39,14 @@
         :before {
             content: '';
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
             animation-name: animationbackground;
             animation-duration: .4s;
             animation-fill-mode: forwards;
+            border-radius: 10px;
         }
 
         .btn-ship {

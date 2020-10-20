@@ -1,6 +1,5 @@
 import React from "react";
 import './rocket-item.scss';
-import {Link} from "react-router-dom";
 import {withRouter} from "react-router";
 
 
@@ -13,14 +12,9 @@ const RocketItem = ({rocket, history}) => {
 
             <div className='rocket__item-info'>
                 <div className='rocket__item-row'><h1 className='rocket-info__name'>{rocket.rocket_name}</h1></div>
-                <div className='rocket__item-row'><span>{rocket.country}</span></div>
-                <div className='rocket__item-row'><span>{rocket.company}</span></div>
+                <div className='rocket__item-row'><span>country: {rocket.country}</span></div>
+                <div className='rocket__item-row'><span>company: {rocket.company}</span></div>
                 <div className='rocket__item-row'><span>STAGES:</span> {rocket.stages}</div>
-                <div className='btn-wrapper'>
-                    <button className='btn-rocket'>
-                        <Link to={`/rockets/${rocket.id}`}>View Details</Link>
-                    </button>
-                </div>
             </div>
         </div>
     );
