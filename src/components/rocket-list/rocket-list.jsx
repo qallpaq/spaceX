@@ -1,7 +1,6 @@
 import React from "react";
 import './rocket-list.scss';
 import RocketItem from "../rocket-item";
-import {connect} from "react-redux";
 
 
 const RocketsList = ({rockets}) => {
@@ -20,9 +19,4 @@ const RocketsList = ({rockets}) => {
     );
 };
 
-
-const mapStateToProps = ({rockets:{rockets}}) => {
-    return {rockets}
-};
-
-export default connect(mapStateToProps)(RocketsList);
+export default RocketsList;

@@ -1,13 +1,13 @@
 import React, {useEffect} from "react";
 import './ship-list.scss';
-import {shipsLoaded, toggleIsFetching} from "../../actions";
+import {setPage, shipsLoaded, toggleIsFetching} from "../../actions";
 import {useSpace} from "../space-context/space-context";
 import {connect} from "react-redux";
 import ShipList from "./ship-list";
 import Spinner from "../spinner";
 
 
-const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentPage}) => {
+const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentPage, ships, totalShipsCount, pageSize, setPage, defaultTheme}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
@@ -23,17 +23,30 @@ const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentP
         return <Spinner/>
     }
 
-    return <ShipList/>
+    return <ShipList ships={ships}
+                     totalShipsCount={totalShipsCount}
+                     pageSize={pageSize}
+                     currentPage={currentPage}
+                     setPage={setPage}
+                     defaultTheme={defaultTheme}/>
 };
 
 
-const mapStateToProps = ({basic: {isFetching}, ships: {pageSize, currentPage}}) => {
-    return {isFetching, pageSize, currentPage}
+const mapStateToProps = ({basic: {isFetching, defaultTheme}, ships: {pageSize, currentPage, ships, totalShipsCount}}) => {
+    return {
+        isFetching,
+        pageSize,
+        currentPage,
+        ships,
+        totalShipsCount,
+        defaultTheme
+    }
 };
 
 const mapDispatchToProps = {
     shipsLoaded,
-    toggleIsFetching
+    toggleIsFetching,
+    setPage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShipsListContainer);

@@ -1,5 +1,6 @@
 const initialState = {
     isFetching: true,
+    defaultTheme: true
 };
 
 const basicReducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const basicReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: action.payload
+            }
+        case 'CHANGE_DEFAULT_THEME':
+            return {
+                ...state,
+                defaultTheme: !state.defaultTheme
             }
         default:
             return state;

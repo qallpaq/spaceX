@@ -6,11 +6,17 @@ import RocketDetailsContainer from "../rocket-details/rocket-details-container";
 import Header from "../header";
 import ShipDetailsContainer from "../ship-details/ship-details-container";
 import Footer from "../footer";
+import {connect} from "react-redux";
 
 
-const App = () => {
+const App = ({defaultTheme}) => {
+    const blackTheme = {
+        background: 'black',
+        color: 'white'
+    };
+
     return (
-        <div className="app">
+        <div className="app" style={!defaultTheme ? blackTheme : null}>
             <Header/>
             <Switch>
                 <Route path='/' exact component={HomePage}/>
@@ -28,4 +34,8 @@ const App = () => {
     );
 };
 
-export default App;
+const mapStateToProps = ({basic: {defaultTheme}}) => {
+    return {defaultTheme}
+};
+
+export default connect(mapStateToProps)(App);

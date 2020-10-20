@@ -3,10 +3,11 @@ import './header.scss';
 import {Link} from "react-router-dom";
 import logo from '../images/SpaceX-Logo.svg';
 import HeaderMenuMobile from "../header-menu-mobile/header-menu-mobile";
+import {changeTheme} from "../../actions";
+import {connect} from "react-redux";
 
 
-const Header = () => {
-
+const Header = ({changeTheme}) => {
     const [menu, setMenu] = useState(false);
 
     return (
@@ -31,6 +32,10 @@ const Header = () => {
                         </Link>
                     </li>
 
+                    <li className='header-link header-link-pc header-link-theme' onClick={() => changeTheme()}>
+                        change theme
+                    </li>
+
                     <div className='header__burger' onClick={() => setMenu(() => !menu)}>
                         <span>
                         </span>
@@ -43,4 +48,12 @@ const Header = () => {
     );
 };
 
-export default Header;
+const mapStateToProps = () => {
+    return {}
+};
+
+const mapDispatchToProps = {
+    changeTheme
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,6 +1,5 @@
 import React from "react";
 import './ship-details.scss';
-import {connect} from "react-redux";
 
 
 const ShipDetails = ({shipsDetails}) => {
@@ -31,8 +30,5 @@ const ShipDetails = ({shipsDetails}) => {
     );
 };
 
-const mapStateToProps = ({ships: {shipsDetails}}) => {
-    return {shipsDetails}
-};
 
-export default connect(mapStateToProps)(ShipDetails);
+export default ShipDetails;

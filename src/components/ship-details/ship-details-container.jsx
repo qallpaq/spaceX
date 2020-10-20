@@ -6,7 +6,7 @@ import ShipDetails from "./ship-details";
 import Spinner from "../spinner";
 
 
-const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetching}) => {
+const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetching, shipsDetails}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
@@ -22,11 +22,11 @@ const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetchi
         return <Spinner/>
     }
 
-    return <ShipDetails/>
+    return <ShipDetails shipsDetails={shipsDetails}/>
 };
 
-const mapStateToProps = ({basic: {isFetching}}) => {
-    return {isFetching}
+const mapStateToProps = ({basic: {isFetching}, ships: {shipsDetails}}) => {
+    return {isFetching, shipsDetails}
 };
 
 const mapDispatchToProps = {

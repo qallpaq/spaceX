@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 1;
     transition: .5s;
-    top: -250px;
+    top: -300px;
     left: 0;
 
     ul {
@@ -20,8 +20,8 @@
 .header-link-mobile {
     font-size: 35px;
     text-align: right;
+    width: auto;
 }
-
 
 @media screen and (max-width: 575px) {
     .header-link-mobile {

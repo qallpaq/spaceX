@@ -6,7 +6,7 @@ import RocketDetails from "./rocket-details";
 import Spinner from "../spinner";
 
 
-const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFetching}) => {
+const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFetching, rocketDetails}) => {
     const spaceX = useSpace();
 
     useEffect(() => {
@@ -23,12 +23,12 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
         return <Spinner/>
     }
 
-    return <RocketDetails/>
+    return <RocketDetails rocketDetails={rocketDetails}/>
 };
 
 
-const mapStateToProps = ({basic: {isFetching}}) => {
-    return {isFetching}
+const mapStateToProps = ({basic: {isFetching}, rockets: {rocketDetails}}) => {
+    return {isFetching,rocketDetails}
 };
 
 const mapDispatchToProps = {

@@ -22,38 +22,9 @@
     text-transform: uppercase;
     transition: .4s;
     background: #ffffff;
+
     a {
         font-size: 25px;
-    }
-}
-
-.ship-list__item {
-    width: 48%;
-    border: 3px solid rgba(70, 109, 252, 0.3);
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 20px;
-    position: relative;
-
-    &:hover {
-        :before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            bottom: -2px;
-            left: -2px;
-            right: -2px;
-            animation-name: animationbackground;
-            animation-duration: .4s;
-            animation-fill-mode: forwards;
-            border-radius: 10px;
-        }
-
-        .btn-ship {
-            top: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 1;
-        }
     }
 }
 
