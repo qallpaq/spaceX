@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/spaceX/static/css/main.60f93977.chunk.css",
-    "main.js": "/spaceX/static/js/main.a3cb5287.chunk.js",
-    "main.js.map": "/spaceX/static/js/main.a3cb5287.chunk.js.map",
+    "main.css": "/spaceX/static/css/main.e951c214.chunk.css",
+    "main.js": "/spaceX/static/js/main.c8ed80cf.chunk.js",
+    "main.js.map": "/spaceX/static/js/main.c8ed80cf.chunk.js.map",
     "runtime-main.js": "/spaceX/static/js/runtime-main.13750f96.js",
     "runtime-main.js.map": "/spaceX/static/js/runtime-main.13750f96.js.map",
     "static/css/2.1216cd76.chunk.css": "/spaceX/static/css/2.1216cd76.chunk.css",
-    "static/js/2.ccdfd24b.chunk.js": "/spaceX/static/js/2.ccdfd24b.chunk.js",
-    "static/js/2.ccdfd24b.chunk.js.map": "/spaceX/static/js/2.ccdfd24b.chunk.js.map",
+    "static/js/2.40dbcd48.chunk.js": "/spaceX/static/js/2.40dbcd48.chunk.js",
+    "static/js/2.40dbcd48.chunk.js.map": "/spaceX/static/js/2.40dbcd48.chunk.js.map",
     "index.html": "/spaceX/index.html",
-    "precache-manifest.1fae2dc447b5f5ce948c609411361977.js": "/spaceX/precache-manifest.1fae2dc447b5f5ce948c609411361977.js",
+    "precache-manifest.7c019fb83748b087cc3d28a6fb993e78.js": "/spaceX/precache-manifest.7c019fb83748b087cc3d28a6fb993e78.js",
     "service-worker.js": "/spaceX/service-worker.js",
     "static/css/2.1216cd76.chunk.css.map": "/spaceX/static/css/2.1216cd76.chunk.css.map",
-    "static/css/main.60f93977.chunk.css.map": "/spaceX/static/css/main.60f93977.chunk.css.map",
-    "static/js/2.ccdfd24b.chunk.js.LICENSE.txt": "/spaceX/static/js/2.ccdfd24b.chunk.js.LICENSE.txt",
+    "static/css/main.e951c214.chunk.css.map": "/spaceX/static/css/main.e951c214.chunk.css.map",
+    "static/js/2.40dbcd48.chunk.js.LICENSE.txt": "/spaceX/static/js/2.40dbcd48.chunk.js.LICENSE.txt",
     "static/media/SpaceX-Logo.svg": "/spaceX/static/media/SpaceX-Logo.6ff54c0f.svg",
     "static/media/home-page.scss": "/spaceX/static/media/photo-1541185933-ef5d8ed016c2.4398c5c2.jpg",
     "static/media/slick-theme.css": "/spaceX/static/media/slick.f97e3bbf.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.13750f96.js",
     "static/css/2.1216cd76.chunk.css",
-    "static/js/2.ccdfd24b.chunk.js",
-    "static/css/main.60f93977.chunk.css",
-    "static/js/main.a3cb5287.chunk.js"
+    "static/js/2.40dbcd48.chunk.js",
+    "static/css/main.e951c214.chunk.css",
+    "static/js/main.c8ed80cf.chunk.js"
   ]
 }
