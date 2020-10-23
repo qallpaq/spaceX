@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
-import {useSpace} from "../space-context/space-context";
+import {useSpace} from "../../space-context/space-context";
+import ShipDetails from "../../ship-details/ship-details";
+import Spinner from "../../spinner";
+import {shipDetailsLoaded, toggleIsFetching} from "../../../actions";
 import {connect} from "react-redux";
-import {shipDetailsLoaded, toggleIsFetching} from "../../actions";
-import ShipDetails from "./ship-details";
-import Spinner from "../spinner";
 
 
 const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetching, shipsDetails}) => {

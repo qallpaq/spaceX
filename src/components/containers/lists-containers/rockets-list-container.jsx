@@ -1,9 +1,9 @@
-import {useSpace} from "../space-context/space-context";
 import React, {useEffect} from "react";
-import {rocketsLoaded, toggleIsFetching} from "../../actions";
+import {useSpace} from "../../space-context/space-context";
+import Spinner from "../../spinner";
+import ItemList from "../../item-list";
+import {rocketsLoaded, toggleIsFetching} from "../../../actions";
 import {connect} from "react-redux";
-import RocketsList from "./rocket-list";
-import Spinner from "../spinner";
 
 
 const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetching}) => {
@@ -13,7 +13,7 @@ const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetch
         toggleIsFetching(true);
         spaceX.getAllRockets()
             .then(res => {
-                rocketsLoaded(res);
+                rocketsLoaded(res.reverse());
                 toggleIsFetching(false);
             })
     }, []);
@@ -22,7 +22,7 @@ const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetch
         return <Spinner/>
     }
 
-    return <RocketsList rockets={rockets}/>
+    return <ItemList item={rockets} type='rockets'/>
 };
 
 

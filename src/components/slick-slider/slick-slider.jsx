@@ -17,7 +17,8 @@ const SlickSlider = ({arr}) => {
 
     const styledImg = {
         width: 100 + '%',
-        height: 70 + 'vh'
+        height: 70 + 'vh',
+        cursor: 'pointer'
     };
 
     return (

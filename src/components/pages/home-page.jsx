@@ -4,7 +4,7 @@ import './home-page.scss';
 
 const HomePage = () => {
     return (
-        <div className='home-page animation-active'>
+        <div className='home-page'>
             <h1 className='home-page__title'>WELCOME TO SPACE-X, BITCH</h1>
         </div>
     );

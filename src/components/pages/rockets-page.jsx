@@ -1,11 +1,11 @@
 import React from "react";
-import RocketsListContainer from "../rocket-list/rocket-list-container";
+import {RocketsListContainer} from "../containers/lists-containers";
 
 
 const RocketsPage = () => {
     return (
         <div className='container'>
-            <RocketsListContainer />
+            <RocketsListContainer/>
         </div>
     );
 };

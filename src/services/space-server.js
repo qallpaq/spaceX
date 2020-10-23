@@ -30,4 +30,12 @@ export default class SpaceServer {
         const ship = await this.getResource(`/ships/`);
         return ship.find(el => el.ship_id === id);
     };
+
+    getAllDragons = async () => {
+        return await this.getResource(`/dragons/`);
+    };
+
+    getDragon = async (id) => {
+        return await this.getResource(`/dragons/${id}`);
+    };
 };

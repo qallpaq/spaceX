@@ -31,6 +31,12 @@ const Header = ({changeTheme}) => {
                     </li>
 
                     <li className='header-link header-link-pc'>
+                        <Link to='/dragons/'>
+                            DRAGONS
+                        </Link>
+                    </li>
+
+                    <li className='header-link header-link-pc'>
                         <Link to='/ships/'>
                             SHIPS
                         </Link>

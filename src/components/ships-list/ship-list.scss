@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 15px;
+    animation-name: animation-active;
+    animation-duration: .2s;
 }
 
 .ship-list__pages {

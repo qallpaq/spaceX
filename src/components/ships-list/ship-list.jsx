@@ -21,7 +21,7 @@ const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage, defau
                         onClick={() => setPage(el)}>{el}</button>
                 })}
             </div>
-            <ul className='ship-list animation-active'>
+            <ul className='ship-list'>
                 {
                     ships.map((ship) => {
                         return (

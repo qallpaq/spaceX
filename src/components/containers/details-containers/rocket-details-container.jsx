@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
-import {useSpace} from "../space-context/space-context";
-import {rocketDetailsLoaded, toggleIsFetching} from "../../actions";
-import RocketDetails from "./rocket-details";
-import Spinner from "../spinner";
+import {useSpace} from "../../space-context/space-context";
+import Spinner from "../../spinner";
+import {rocketDetailsLoaded, toggleIsFetching} from "../../../actions";
+import Details from "../../details";
 
 
 const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFetching, rocketDetails}) => {
@@ -22,7 +22,7 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
         return <Spinner/>
     }
 
-    return <RocketDetails rocketDetails={rocketDetails}/>
+    return <Details details={rocketDetails} type='rockets'/>
 };
 
 

@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
-import './ship-list.scss';
-import {setPage, shipsLoaded, toggleIsFetching} from "../../actions";
-import {useSpace} from "../space-context/space-context";
+import {useSpace} from "../../space-context/space-context";
+import Spinner from "../../spinner";
+import ShipList from "../../ships-list/ship-list";
+import {setPage, shipsLoaded, toggleIsFetching} from "../../../actions";
 import {connect} from "react-redux";
-import ShipList from "./ship-list";
-import Spinner from "../spinner";
 
 
 const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentPage, ships, totalShipsCount, pageSize, setPage, defaultTheme}) => {
