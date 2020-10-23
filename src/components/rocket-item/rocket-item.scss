@@ -6,7 +6,7 @@
     padding: 15px;
     transition: .2s;
     cursor: pointer;
-    border: 3px solid rgba(70, 109, 252, 0.3);
+    border: 3px solid rgba(21, 95, 252, .5);
 
     &:hover {
         box-shadow: 5px 5px 30px -5px rgba(0, 0, 0, 0.75);
@@ -78,6 +78,7 @@
 
     .rocket__item {
         font-size: 13px;
+        border: 1px solid rgba(21, 95, 252, .5);
     }
 
     .btn-rocket {

@@ -11,11 +11,11 @@ const ShipsListContainer = ({shipsLoaded, isFetching, toggleIsFetching, currentP
     const spaceX = useSpace();
 
     useEffect(() => {
-        toggleIsFetching(true)
+        toggleIsFetching(true);
         spaceX.getAllShips(currentPage)
             .then((ships) => {
-                shipsLoaded(ships)
-                toggleIsFetching(false)
+                shipsLoaded(ships);
+                toggleIsFetching(false);
             })
     }, [currentPage]);
 

@@ -10,12 +10,11 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
     const spaceX = useSpace();
 
     useEffect(() => {
-        toggleIsFetching(true)
-        console.log('rocket-details-container render')
+        toggleIsFetching(true);
         spaceX.getRocket(id)
             .then(rocket => {
                 rocketDetailsLoaded(rocket);
-                toggleIsFetching(false)
+                toggleIsFetching(false);
             })
     }, []);
 
@@ -28,7 +27,7 @@ const RocketDetailsContainer = ({id, rocketDetailsLoaded, isFetching, toggleIsFe
 
 
 const mapStateToProps = ({basic: {isFetching}, rockets: {rocketDetails}}) => {
-    return {isFetching,rocketDetails}
+    return {isFetching, rocketDetails}
 };
 
 const mapDispatchToProps = {
