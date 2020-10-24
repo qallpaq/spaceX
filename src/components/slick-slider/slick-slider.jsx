@@ -15,7 +15,7 @@ const SlickSlider = ({arr}) => {
         autoplay: true,
         appendDots: dots => (
             <div>
-                <ul style={{marginBottom: "33px", backgroundColor: 'rgba(253,253,253,0.3)'}}> {dots} </ul>
+                <ul style={{marginBottom: "30px"}}> {dots} </ul>
             </div>
         )
     };
@@ -23,7 +23,9 @@ const SlickSlider = ({arr}) => {
     const styledImg = {
         width: 100 + '%',
         height: 60 + 'vh',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        backgroundColor: 'rgba(255,255,255,0.95)',
+        padding: 15 + 'px'
     };
 
     return (

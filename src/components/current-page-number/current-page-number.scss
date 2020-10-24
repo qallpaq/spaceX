@@ -1,8 +1,8 @@
 .current-page-number {
     position: fixed;
-    right: 5%;
+    right: 2%;
     top: 50%;
-    transform: translate(-5%, -50%);
+    transform: translate(-2%, -50%);
     font-size: 20px;
     color: grey;
 
@@ -13,7 +13,7 @@
     }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 760px) {
     .current-page-number {
         display: none;
     }

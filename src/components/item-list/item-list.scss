@@ -1,5 +1,6 @@
 .items__list {
     padding: 15px;
+    margin: 40px 0 0;
     animation-name: animation-active;
     animation-duration: .2s;
     min-height: 90vh;
@@ -33,15 +34,27 @@
 }
 
 @media screen and (max-width: 767px) {
+    .items__list {
+        padding: 0;
+    }
+
     .items__list-element {
-        width: 32%;
+        transform: skew(0deg, 0deg) translateY(0px);
+        width: 45%;
+        height: 400px;
+        clip-path: none;
     }
 }
 
 @media screen and (max-width: 512px) {
     .items__list-element {
-        height: 350px;
-        width: 42%;
-        margin: 10px 5px;
+        margin: 0px 5px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .items__list-element {
+        height: 230px;
     }
 }

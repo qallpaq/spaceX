@@ -6,9 +6,9 @@
     align-items: center;
     height: 100px;
     position: fixed;
-    left: 5%;
+    left: 2%;
     top: 50%;
-    transform: translate(-5%, -50%);
+    transform: translate(-2%, -50%);
 }
 
 .current-page-dots__item {
@@ -24,7 +24,7 @@
     }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 760px) {
     .current-page-dots {
         display: none;
     }

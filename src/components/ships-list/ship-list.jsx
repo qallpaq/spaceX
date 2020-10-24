@@ -7,7 +7,7 @@ const ShipList = ({ships}) => {
 
     return (
         <div className='container'>
-            <ul className='items__list items__list_ships'>
+            <ul className='items__list'>
                 {
                     ships.map((ship) => {
                         return (
