@@ -1,0 +1,14 @@
+.current-page-number {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    font-size: 20px;
+    color: grey;
+
+    span {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 500;
+    }
+}

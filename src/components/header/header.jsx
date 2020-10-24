@@ -3,49 +3,41 @@ import './header.scss';
 import {Link} from "react-router-dom";
 import logo from '../images/SpaceX-Logo.svg';
 import HeaderMenuMobile from "../header-menu-mobile/header-menu-mobile";
-import {changeTheme} from "../../actions";
 import {connect} from "react-redux";
 
 
-const Header = ({changeTheme}) => {
+const Header = ({currentPage}) => {
     const [menu, setMenu] = useState(false);
-
     const closeMenu = () => {
         return setMenu(false)
     };
 
+    const links = [
+        {link: '/', page: 'home'},
+        {link: '/rockets/', page: 'rockets'},
+        {link: '/dragons/', page: 'dragons'},
+        {link: '/ships/', page: 'ships'}
+    ];
+
     return (
         <header>
-            <nav className="navbar navbar-dark bg-dark">
+            <nav className="navbar">
                 <div className='container'>
                     <li className='header-link'>
-                        <Link to='/'>
-                            <img className='space-x-logo' src={logo} alt="logo"/>
-                        </Link>
+                        <img className='space-x-logo' src={logo} alt="logo"/>
                     </li>
-
-                    <li className='header-link header-link-pc'>
-                        <Link to='/rockets/'>
-                            ROCKETS
-                        </Link>
-                    </li>
-
-                    <li className='header-link header-link-pc'>
-                        <Link to='/dragons/'>
-                            DRAGONS
-                        </Link>
-                    </li>
-
-                    <li className='header-link header-link-pc'>
-                        <Link to='/ships/'>
-                            SHIPS
-                        </Link>
-                    </li>
-
-                    <li className='header-link header-link-pc header-link-theme' onClick={() => changeTheme()}>
-                        change theme
-                    </li>
-
+                    {
+                        links.map((el, idx) => {
+                            return (
+                                <li key={el.link}
+                                    className={`header-link header-link-pc ${currentPage === idx + 1 ? 'active' : null}`}>
+                                    <Link to={el.link}>
+                                        {el.page}
+                                    </Link>
+                                </li>
+                            )
+                        })
+                    }
                     <div className='header__burger' onClick={() => setMenu(() => !menu)}>
                         <span>
                         </span>
@@ -58,12 +50,9 @@ const Header = ({changeTheme}) => {
     );
 };
 
-const mapStateToProps = () => {
-    return {}
+const mapStateToProps = ({basic: {currentPage}}) => {
+    return {currentPage}
 };
 
-const mapDispatchToProps = {
-    changeTheme
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);

@@ -3,7 +3,7 @@ import React from "react";
 import './ship-list.scss';
 
 
-const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage, defaultTheme}) => {
+const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage}) => {
 
     const arrayOfButtons = Math.ceil(totalShipsCount / pageSize);
     const pages = [];
@@ -16,7 +16,7 @@ const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage, defau
             <div className='ship-list__pages'>
                 {pages.map((el, idx) => {
                     return <button
-                        className={`ship-list__pages-btn ${el === currentPage && 'active'} ${!defaultTheme ? 'ship-list__pages-btn_dark' : null}`}
+                        className={`ship-list__pages-btn ${el === currentPage && 'active'}`}
                         key={idx}
                         onClick={() => setPage(el)}>{el}</button>
                 })}
@@ -25,7 +25,7 @@ const ShipList = ({ships, totalShipsCount, pageSize, currentPage, setPage, defau
                 {
                     ships.map((ship) => {
                         return (
-                            <li className={`ship-list__item ${!defaultTheme ? 'ship-list__item_dark' : null}`}
+                            <li className={`ship-list__item`}
                                 key={ship.ship_id}>
                                 <ShipItem ship={ship}/>
                             </li>

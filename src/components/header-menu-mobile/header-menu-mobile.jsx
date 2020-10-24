@@ -1,11 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import './header-menu-mobile.scss';
-import {connect} from "react-redux";
-import {changeTheme} from "../../actions";
 
 
-const HeaderMenuMobile = ({menu, changeTheme, closeMenu}) => {
+const HeaderMenuMobile = ({menu, closeMenu}) => {
     return (
         <div className={`header-menu-mobile ${menu && 'active'}`}>
             <div className="container">
@@ -33,22 +31,11 @@ const HeaderMenuMobile = ({menu, changeTheme, closeMenu}) => {
                             <span className='header-link-mobile__item'>SHIPS</span>
                         </Link>
                     </li>
-
-                    <li className='header-link header-link-mobile header-link-theme' onClick={() => changeTheme()}>
-                        <span className='header-link-mobile__item'>change theme</span>
-                    </li>
                 </ul>
             </div>
         </div>
     );
 };
 
-const mapStateToProps = () => {
-    return {}
-};
 
-const mapDispatchToProps = {
-    changeTheme
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderMenuMobile);
+export default HeaderMenuMobile;

@@ -1,22 +1,20 @@
 import React from "react";
 import {Route, Switch} from "react-router";
-import {connect} from "react-redux";
 import Header from "../header";
 import Footer from "../footer";
 import './app.scss';
 import {DragonPage, HomePage, RocketsPage, ShipsPage} from "../pages";
 import {DragonDetailsContainer, RocketDetailsContainer, ShipDetailsContainer} from "../containers/details-containers";
+import CurrentPageNumber from "../current-page-number/current-page-number";
+import CurrentPageDots from "../current-page-dots/current-page-dots";
 
 
-const App = ({defaultTheme}) => {
-    const blackTheme = {
-        background: '#333',
-        color: 'white'
-    };
-
+const App = () => {
     return (
-        <div className="app" style={!defaultTheme ? blackTheme : null}>
+        <div className="app">
             <Header/>
+            <CurrentPageNumber />
+            <CurrentPageDots />
             <Switch>
                 <Route path='/' exact component={HomePage}/>
                 <Route path='/rockets' exact component={RocketsPage}/>
@@ -39,8 +37,5 @@ const App = ({defaultTheme}) => {
     );
 };
 
-const mapStateToProps = ({basic: {defaultTheme}}) => {
-    return {defaultTheme}
-};
 
-export default connect(mapStateToProps)(App);
+export default App;

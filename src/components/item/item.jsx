@@ -8,9 +8,9 @@ const Item = ({data, type}) => {
     const setDetails = () => {
         switch (type) {
             case 'rockets':
-                return ['rocket_name', 'country', 'company', 'first_flight'];
+                return ['rocket_name'];
             case 'dragons':
-                return ['name', 'type', 'active', 'first_flight'];
+                return ['name'];
             default:
                 return null
         }
@@ -18,17 +18,16 @@ const Item = ({data, type}) => {
 
     return (
         <>
-            <div className='item__list-img-wrapper'>
-                <img className='item__list-img'
-                     src={flickr_images[0]}
-                     alt="item-img"/>
+            <div
+                className='item__list-img-wrapper'
+                style={{background: `url(${flickr_images[1]}) no-repeat center`, 'backgroundSize': 'cover'}}>
             </div>
 
             <div className='item__list-info'>
                 {setDetails().map((key, idx) => {
                     return (
                         <div className='item__list-row' key={idx}>
-                            {`${key.replace('_', ' ')}: ${data[key]}`}
+                            <h1 className='item__title'>{data[key]}</h1>
                         </div>
                     );
                 })}

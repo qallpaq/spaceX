@@ -1,6 +1,6 @@
 const initialState = {
     isFetching: true,
-    defaultTheme: true
+    currentPage: 1
 };
 
 const basicReducer = (state = initialState, action) => {
@@ -10,10 +10,10 @@ const basicReducer = (state = initialState, action) => {
                 ...state,
                 isFetching: action.payload
             }
-        case 'CHANGE_DEFAULT_THEME':
+        case 'SET_CURRENT_PAGE':
             return {
                 ...state,
-                defaultTheme: !state.defaultTheme
+                currentPage: action.payload
             }
         default:
             return state;

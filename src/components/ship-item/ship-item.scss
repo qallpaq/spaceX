@@ -1,7 +1,8 @@
 .ship__img-wrapper {
     width: 100%;
-    height: 260px;
+    height: 200px;
     margin-bottom: 10px;
+    border-bottom: 3px solid #ffe000;
 }
 
 .ship-img {
@@ -11,6 +12,7 @@
 
 .ship__item-name {
     text-align: center;
+    color: #ffe000;
 }
 
 @media screen and (max-width: 768px) {

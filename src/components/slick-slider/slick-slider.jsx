@@ -13,11 +13,16 @@ const SlickSlider = ({arr}) => {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
+        appendDots: dots => (
+            <div>
+                <ul style={{marginBottom: "33px", backgroundColor: 'rgba(253,253,253,0.3)'}}> {dots} </ul>
+            </div>
+        )
     };
 
     const styledImg = {
         width: 100 + '%',
-        height: 70 + 'vh',
+        height: 60 + 'vh',
         cursor: 'pointer'
     };
 
@@ -32,6 +37,7 @@ const SlickSlider = ({arr}) => {
             })}
         </Slider>
     );
-}
+};
+
 
 export default SlickSlider;

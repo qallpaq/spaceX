@@ -1,11 +1,14 @@
 .ship-details {
+    margin-top: 80px;
     width: 100%;
     padding: 15px;
+    animation-name: animation-active;
+    animation-duration: .2s;
 }
 
 .ship-details__img-wrapper {
     width: 100%;
-    height: 500px;
+    height: 60vh;
     margin-bottom: 20px;
 }
 
@@ -14,18 +17,11 @@
     height: 100%;
 }
 
+.ship-details__info {
+    padding: 15px;
+    background: rgba(3, 3, 3, 0.3);
+}
+
 .ship-details__row {
     margin-bottom: 10px;
-}
-
-@media screen and (max-width: 425px) {
-    .ship-details__img-wrapper {
-        height: 300px;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .ship-details__img-wrapper {
-        height: 200px;
-    }
 }

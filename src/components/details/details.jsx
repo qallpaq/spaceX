@@ -7,9 +7,9 @@ const Details = ({details, type}) => {
     const setDetails = () => {
         switch (type) {
             case 'rockets':
-                return ['rocket_name', 'description', 'boosters', 'stages', 'active', 'first_flight'];
+                return ['rocket_name', 'description', 'boosters', 'stages', 'first_flight'];
             case 'dragons':
-                return ['name', 'description', 'type', 'active', 'first_flight']
+                return ['name', 'description', 'type', 'first_flight']
             default:
                 return null
         }
