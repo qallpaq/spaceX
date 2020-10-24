@@ -24,3 +24,24 @@
         }
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .items__list-element {
+        height: 400px;
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .items__list-element {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .items__list-element {
+        height: 350px;
+        width: 42%;
+        margin: 10px 5px;
+    }
+}

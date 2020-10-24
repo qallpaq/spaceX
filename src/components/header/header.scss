@@ -3,15 +3,17 @@
     margin-bottom: 10px;
 }
 
-.header-link {
-    width: 100px;
-    height: 50px;
+.header__links {
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    width: 50%;
+}
+
+.header-link {
     text-transform: uppercase;
     a {
         font-size: 20px;
-        max-width: 100%;
         transition: .3s;
         color: #fff;
 
@@ -32,6 +34,10 @@
 @media screen and (max-width: 760px) {
     .header-link-pc {
         display: none;
+    }
+
+    .header__links {
+        width: 0;
     }
 
     .header__burger {
@@ -69,12 +75,5 @@
 
     .header__burger:after {
         bottom: 0;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .header-link {
-        width: 60px;
     }
 }

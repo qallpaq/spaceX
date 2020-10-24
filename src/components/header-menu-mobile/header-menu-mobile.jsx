@@ -27,6 +27,12 @@ const HeaderMenuMobile = ({menu, closeMenu}) => {
                     </li>
 
                     <li className='header-link-mobile'>
+                        <Link to='/dragons/'>
+                            <span className='header-link-mobile__item'>DRAGONS</span>
+                        </Link>
+                    </li>
+
+                    <li className='header-link-mobile'>
                         <Link to='/ships/'>
                             <span className='header-link-mobile__item'>SHIPS</span>
                         </Link>

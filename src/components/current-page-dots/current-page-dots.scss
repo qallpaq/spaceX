@@ -23,3 +23,9 @@
         box-shadow: 0 0 0 10px black, 0 0 0 12px #ffb800;
     }
 }
+
+@media screen and (max-width: 512px) {
+    .current-page-dots {
+        display: none;
+    }
+}

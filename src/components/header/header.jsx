@@ -23,21 +23,23 @@ const Header = ({currentPage}) => {
         <header>
             <nav className="navbar">
                 <div className='container'>
-                    <li className='header-link'>
-                        <img className='space-x-logo' src={logo} alt="logo"/>
-                    </li>
-                    {
-                        links.map((el, idx) => {
-                            return (
-                                <li key={el.link}
-                                    className={`header-link header-link-pc ${currentPage === idx + 1 ? 'active' : null}`}>
-                                    <Link to={el.link}>
-                                        {el.page}
-                                    </Link>
-                                </li>
-                            )
-                        })
-                    }
+                    <img className='space-x-logo' src={logo} alt="logo"/>
+
+                    <div className='header__links'>
+                        {
+                            links.map((el, idx) => {
+                                return (
+                                    <li key={el.link}
+                                        className={`header-link header-link-pc ${currentPage === idx + 1 ? 'active' : null}`}>
+                                        <Link to={el.link}>
+                                            {el.page}
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
+                    </div>
+
                     <div className='header__burger' onClick={() => setMenu(() => !menu)}>
                         <span>
                         </span>

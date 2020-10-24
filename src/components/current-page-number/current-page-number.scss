@@ -12,3 +12,9 @@
         font-weight: 500;
     }
 }
+
+@media screen and (max-width: 512px) {
+    .current-page-number {
+        display: none;
+    }
+}
