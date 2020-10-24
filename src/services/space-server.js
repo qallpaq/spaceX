@@ -20,9 +20,8 @@ export default class SpaceServer {
         return rocket[id - 1];
     };
 
-    getAllShips = async (id) => {
-        const offset = (5 * (id - 1)) + id - 1;
-        const allShips = await this.getResource(`/ships/?offset=${offset}&limit=${5}`);
+    getAllShips = async () => {
+        const allShips = await this.getResource(`/ships/`);
         return allShips.filter((el) => el.image !== null);
     };
 

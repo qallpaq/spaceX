@@ -1,13 +1,15 @@
 .items__list {
-    margin-top: 80px;
     padding: 15px;
     animation-name: animation-active;
     animation-duration: .2s;
+    min-height: 90vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
     &-element {
-        margin: 0 10px;
+        margin: 20px 10px;
         transform: skew(-15deg, 0deg) translateY(0px);
         cursor: pointer;
         display: block;

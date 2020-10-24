@@ -10,7 +10,6 @@ const ItemList = ({item, type, history}) => {
             {
                 item.map((data) => {
                     return (
-
                         <li className={`items__list-element`}
                             key={data.id}
                             onClick={() => history.push(`/${type}/${data.id}`)}>

@@ -7,13 +7,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Teko', sans-serif;
-    background: url('../images/space.jpg') no-repeat 50% 50% fixed;
-    background-size: cover;
-    color: #fff;
-}
-
 a, ul, li {
     text-decoration: none;
     padding: 0;
@@ -30,9 +23,13 @@ button:focus, input:focus {
 }
 
 .app {
+    background: url('../images/space.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+    color: #fff;
     min-height: 100vh;
     position: relative;
     transition: .3s;
+    font-family: 'Teko', sans-serif;
 }
 
 @media screen and (max-width: 480px) {

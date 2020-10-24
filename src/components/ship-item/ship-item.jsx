@@ -6,16 +6,17 @@ import {Link} from "react-router-dom";
 const ShipItem = ({ship}) => {
     return (
         <Link to={`/ships/${ship.ship_id}`}>
-            <div className="ship__img-wrapper">
-                <img className='ship-img' src={ship.image} alt="ship"/>
+            <div className="item__list-img-wrapper"
+                 style={{background: `url(${ship.image}) no-repeat center`, 'backgroundSize': 'cover'}}>
             </div>
 
-            <div className='ship__item-row'>
-                <h1 className='ship__item-name'>{ship.ship_name}</h1>
+            <div className='item__list-row'>
+                <h1 className='item__title'>{ship.ship_name}</h1>
             </div>
         </Link>
 
     );
 };
+
 
 export default ShipItem;
