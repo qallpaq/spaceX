@@ -1,7 +1,5 @@
 const initialState = {
     ships: [],
-    pageSize: 5,
-    totalShipsCount: 19,
     currentPage: 1,
     shipsDetails: [],
 };
@@ -27,5 +25,6 @@ const shipsReducer = (state = initialState, action) => {
             return state;
     }
 };
+
 
 export default shipsReducer;

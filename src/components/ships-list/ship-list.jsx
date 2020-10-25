@@ -3,11 +3,13 @@ import React from "react";
 import './ship-list.scss';
 
 
-const ShipList = ({ships}) => {
+const ShipList = ({ships, setPage, currentPage}) => {
+
+    const arrayForButtons = [1, 2];
 
     return (
         <div className='container'>
-            <ul className='items__list'>
+            <ul className='items__list items__list-ships'>
                 {
                     ships.map((ship) => {
                         return (
@@ -19,6 +21,20 @@ const ShipList = ({ships}) => {
                     })
                 }
             </ul>
+
+            <div className='ship__list-pages'>
+                {
+                    arrayForButtons.map(el => {
+                        return (
+                            <button className={`ship__list-button ${currentPage === el ? 'active' : null}`}
+                                    onClick={() => setPage(el)}
+                                    key={el}>
+                                {el}
+                            </button>
+                        );
+                    })
+                }
+            </div>
         </div>
     );
 };
