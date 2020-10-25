@@ -13,6 +13,10 @@ a, ul, li {
     list-style: none;
 }
 
+html, body {
+    height: 100%;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -22,12 +26,11 @@ button:focus, input:focus {
     cursor: pointer;
 }
 
-.app {
+.app-content {
     background: url('../images/space.jpg') no-repeat 50% 50% fixed;
     background-size: cover;
     color: #fff;
     min-height: 100vh;
-    position: relative;
     transition: .3s;
     font-family: 'Teko', sans-serif;
 }

@@ -21,7 +21,7 @@ export default class SpaceServer {
     };
 
     getAllShips = async () => {
-        const allShips = await this.getResource(`/ships/`);
+        const allShips = await this.getResource(`/ships/?limit=10`);
         return allShips.filter((el) => el.image !== null);
     };
 

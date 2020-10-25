@@ -7,11 +7,11 @@ const Details = ({details, type}) => {
     const setDetails = () => {
         switch (type) {
             case 'rockets':
-                return ['rocket_name', 'description', 'boosters', 'stages', 'first_flight'];
+                return ['rocket_name', 'description', 'country', 'cost_per_launch', 'boosters', 'stages', 'first_flight'];
             case 'dragons':
-                return ['name', 'description', 'type', 'first_flight']
+                return ['name', 'description', 'type', 'first_flight'];
             default:
-                return null
+                return null;
         }
     };
 
@@ -20,6 +20,7 @@ const Details = ({details, type}) => {
     return (
         <div className='container'>
             <div className='item__details'>
+
                 <SlickSlider arr={flickr_images}/>
 
                 <div className='item__details-content'>

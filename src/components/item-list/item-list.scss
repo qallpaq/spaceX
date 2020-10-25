@@ -43,6 +43,10 @@
         width: 45%;
         height: 400px;
         clip-path: none;
+
+        &:hover {
+            transform: skew(0deg, 0deg) translateY(0px);
+        }
     }
 }
 

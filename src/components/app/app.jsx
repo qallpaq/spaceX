@@ -11,27 +11,29 @@ import CurrentPageDots from "../current-page-dots/current-page-dots";
 
 const App = () => {
     return (
-        <div className="app">
-            <Header/>
-            <CurrentPageNumber/>
-            <CurrentPageDots/>
-            <Switch>
-                <Route path='/' exact component={HomePage}/>
-                <Route path='/rockets' exact component={RocketsPage}/>
-                <Route path='/rockets/:id' render={({match}) => {
-                    return <RocketDetailsContainer id={match.params.id}/>
-                }}/>
+        <div className='app'>
+            <div className="app-content">
+                <Header/>
+                <CurrentPageNumber/>
+                <CurrentPageDots/>
+                <Switch>
+                    <Route path='/' exact component={HomePage}/>
+                    <Route path='/rockets' exact component={RocketsPage}/>
+                    <Route path='/rockets/:id' render={({match}) => {
+                        return <RocketDetailsContainer id={match.params.id}/>
+                    }}/>
 
-                <Route path='/dragons' exact component={DragonPage}/>
-                <Route path='/dragons/:id' render={({match}) => {
-                    return <DragonDetailsContainer id={match.params.id}/>
-                }}/>
+                    <Route path='/dragons' exact component={DragonPage}/>
+                    <Route path='/dragons/:id' render={({match}) => {
+                        return <DragonDetailsContainer id={match.params.id}/>
+                    }}/>
 
-                <Route path='/ships' exact component={ShipsPage}/>
-                <Route path='/ships/:id' render={({match}) => {
-                    return <ShipDetailsContainer id={match.params.id}/>
-                }}/>
-            </Switch>
+                    <Route path='/ships' exact component={ShipsPage}/>
+                    <Route path='/ships/:id' render={({match}) => {
+                        return <ShipDetailsContainer id={match.params.id}/>
+                    }}/>
+                </Switch>
+            </div>
             <Footer/>
         </div>
     );
