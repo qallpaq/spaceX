@@ -69,6 +69,7 @@
 .contact__content-text {
     flex-grow: 1;
     margin-bottom: 10px;
+    resize: none;
     @extend %shared-text;
 
     &:focus {
@@ -80,4 +81,17 @@
     width: 100%;
     padding: 10px;
     text-transform: uppercase;
+    background: #fff;
+    transition: .3s;
+
+    &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .contact__info {
+        font-size: 12px;
+    }
 }
