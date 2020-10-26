@@ -16,7 +16,8 @@ const Header = ({currentPage}) => {
         {link: '/', page: 'home'},
         {link: '/rockets/', page: 'rockets'},
         {link: '/dragons/', page: 'dragons'},
-        {link: '/ships/', page: 'ships'}
+        {link: '/ships/', page: 'ships'},
+        {link: '/contact/', page: 'contact'}
     ];
 
     return (

@@ -3,7 +3,11 @@ import {ShipsListContainer} from "../containers/lists-containers";
 
 
 const ShipsPage = () => {
-    return <ShipsListContainer/>
+    return (
+        <div className='container'>
+            <ShipsListContainer/>
+        </div>
+    );
 };
 
 export default ShipsPage;

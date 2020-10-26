@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {useSpace} from "../../space-context/space-context";
+import {useSpace} from "../../context/space-context/space-context";
 import Spinner from "../../spinner";
 import ItemList from "../../item-list";
 import {rocketsLoaded, setCurrentPage, toggleIsFetching} from "../../../actions";

@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
-import {useSpace} from "../../space-context/space-context";
+import {useSpace} from "../../context/space-context/space-context";
 import Spinner from "../../spinner";
 import {rocketDetailsLoaded, setCurrentPage, toggleIsFetching} from "../../../actions";
 import Details from "../../details";

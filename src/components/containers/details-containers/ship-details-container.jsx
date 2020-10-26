@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {useSpace} from "../../space-context/space-context";
+import {useSpace} from "../../context/space-context/space-context";
 import ShipDetails from "../../ship-details/ship-details";
 import Spinner from "../../spinner";
 import {setCurrentPage, shipDetailsLoaded, toggleIsFetching} from "../../../actions";

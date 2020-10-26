@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 
 
 const CurrentPageDots = ({currentPage}) => {
-    const dots = [1, 2, 3, 4];
+    const dots = [1, 2, 3, 4, 5];
 
     return (
         <div className='current-page-dots'>

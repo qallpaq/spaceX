@@ -26,6 +26,10 @@ button:focus, input:focus {
     cursor: pointer;
 }
 
+.app {
+    overflow: hidden;
+}
+
 .app-content {
     background: url('../images/space.jpg') no-repeat 50% 50% fixed;
     background-size: cover;
@@ -43,9 +47,12 @@ button:focus, input:focus {
 
 @keyframes animation-active {
     0% {
-        transform: translateX(10%);
+        opacity: 0;
+        transform: translateX(100%);
     }
+
     100% {
+        opacity: 1;
         transform: translateX(0%);
     }
 }

@@ -11,7 +11,7 @@ const HomePage = ({setCurrentPage}) => {
 
     return (
         <div className='home-page'>
-            <h1 className='home-page__title'>WELCOME TO SPACE-X, BITCH</h1>
+            <h1 className='home-page__title'>WELCOME TO SPACE-X</h1>
         </div>
     );
 };

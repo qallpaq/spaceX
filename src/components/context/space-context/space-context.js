@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import SpaceServer from "../../services/space-server";
+import SpaceServer from "../../../services/space-server";
 
 
 const SpaceContext = React.createContext();

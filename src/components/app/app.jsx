@@ -3,10 +3,10 @@ import {Route, Switch} from "react-router";
 import Header from "../header";
 import Footer from "../footer";
 import './app.scss';
-import {DragonPage, HomePage, RocketsPage, ShipsPage} from "../pages";
+import {ContactPage, DragonPage, HomePage, RocketsPage, ShipsPage} from "../pages";
 import {DragonDetailsContainer, RocketDetailsContainer, ShipDetailsContainer} from "../containers/details-containers";
-import CurrentPageNumber from "../current-page-number/current-page-number";
-import CurrentPageDots from "../current-page-dots/current-page-dots";
+import CurrentPageNumber from "../current-page-number";
+import CurrentPageDots from "../current-page-dots";
 
 
 const App = () => {
@@ -32,6 +32,8 @@ const App = () => {
                     <Route path='/ships/:id' render={({match}) => {
                         return <ShipDetailsContainer id={match.params.id}/>
                     }}/>
+
+                    <Route path='/contact' exact component={ContactPage}/>
                 </Switch>
             </div>
             <Footer/>

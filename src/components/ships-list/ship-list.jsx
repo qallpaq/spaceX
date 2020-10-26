@@ -8,7 +8,7 @@ const ShipList = ({ships, setPage, currentPage}) => {
     const arrayForButtons = [1, 2];
 
     return (
-        <div className='container'>
+        <>
             <ul className='items__list items__list-ships'>
                 {
                     ships.map((ship) => {
@@ -35,7 +35,7 @@ const ShipList = ({ships, setPage, currentPage}) => {
                     })
                 }
             </div>
-        </div>
+        </>
     );
 };
 
