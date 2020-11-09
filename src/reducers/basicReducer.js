@@ -1,5 +1,5 @@
 const initialState = {
-    isFetching: true,
+    isFetching: false,
     currentPage: 1
 };
 

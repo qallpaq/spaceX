@@ -1,22 +1,14 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
-import {useSpace} from "../../context/space-context/space-context";
 import Spinner from "../../spinner";
 import Details from "../../details";
-import {dragonsDetailsLoaded, setCurrentPage, toggleIsFetching} from "../../../actions";
+import {getDragon} from "../../../thunk";
 
 
-const DragonDetailsContainer = ({dragonsDetails, dragonsDetailsLoaded, id, isFetching, toggleIsFetching, setCurrentPage}) => {
-    const spaceX = useSpace();
+const DragonDetailsContainer = ({dragonsDetails, id, isFetching, getDragon}) => {
 
     useEffect(() => {
-        setCurrentPage(3);
-        toggleIsFetching(true);
-        spaceX.getDragon(id)
-            .then((res) => {
-                dragonsDetailsLoaded(res);
-                toggleIsFetching(false);
-            })
+        getDragon(id)
     }, []);
 
     if (isFetching) {
@@ -32,9 +24,7 @@ const mapStateToProps = ({dragons: {dragonsDetails}, basic: {isFetching}}) => {
 };
 
 const mapDispatchToProps = {
-    dragonsDetailsLoaded,
-    toggleIsFetching,
-    setCurrentPage
+    getDragon
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonDetailsContainer);

@@ -1,22 +1,14 @@
 import React, {useEffect} from "react";
-import {useSpace} from "../../context/space-context/space-context";
 import Spinner from "../../spinner";
 import ItemList from "../../item-list";
-import {rocketsLoaded, setCurrentPage, toggleIsFetching} from "../../../actions";
 import {connect} from "react-redux";
+import {getRockets} from "../../../thunk";
 
 
-const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetching, setCurrentPage}) => {
-    const spaceX = useSpace();
+const RocketsListContainer = ({isFetching, rockets, getRockets}) => {
 
     useEffect(() => {
-        setCurrentPage(2);
-        toggleIsFetching(true);
-        spaceX.getAllRockets()
-            .then(res => {
-                rocketsLoaded(res.reverse());
-                toggleIsFetching(false);
-            })
+        getRockets();
     }, []);
 
     if (isFetching) {
@@ -27,14 +19,12 @@ const RocketsListContainer = ({rocketsLoaded, isFetching, rockets, toggleIsFetch
 };
 
 
-const mapStateToProps = ({basic: {isFetching, currentPage}, rockets: {rockets}}) => {
-    return {isFetching, rockets, currentPage};
+const mapStateToProps = ({rockets: {rockets}, basic: {isFetching}}) => {
+    return {rockets, isFetching};
 };
 
 const mapDispatchToProps = {
-    rocketsLoaded,
-    toggleIsFetching,
-    setCurrentPage
+    getRockets
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(RocketsListContainer);

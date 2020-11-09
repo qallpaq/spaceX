@@ -11,7 +11,7 @@ const ContactForm = ({setCurrentPage}) => {
         setCurrentPage(5);
     }, []);
 
-    const alert = useContext(AlertContext)
+    const alert = useContext(AlertContext);
 
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
@@ -34,9 +34,7 @@ const ContactForm = ({setCurrentPage}) => {
 
     return (
         <form className='contact' onSubmit={onSubmit}>
-
             <Alert/>
-
             <div className='contact__info'>
                 <div className="contact__info-item">
                     <div className="contact__item-text">

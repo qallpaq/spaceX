@@ -1,22 +1,14 @@
 import React, {useEffect} from "react";
-import {useSpace} from "../../context/space-context/space-context";
 import ShipDetails from "../../ship-details/ship-details";
 import Spinner from "../../spinner";
-import {setCurrentPage, shipDetailsLoaded, toggleIsFetching} from "../../../actions";
 import {connect} from "react-redux";
+import {getShip} from "../../../thunk";
 
 
-const ShipDetailsContainer = ({id, shipDetailsLoaded, isFetching, toggleIsFetching, shipsDetails, setCurrentPage}) => {
-    const spaceX = useSpace();
+const ShipDetailsContainer = ({id, isFetching, shipsDetails, getShip}) => {
 
     useEffect(() => {
-        setCurrentPage(4);
-        toggleIsFetching(true);
-        spaceX.getShip(id)
-            .then(ship => {
-                shipDetailsLoaded(ship)
-                toggleIsFetching(false)
-            })
+        getShip(id)
     }, []);
 
     if (isFetching) {
@@ -31,9 +23,7 @@ const mapStateToProps = ({basic: {isFetching}, ships: {shipsDetails}}) => {
 };
 
 const mapDispatchToProps = {
-    shipDetailsLoaded,
-    toggleIsFetching,
-    setCurrentPage
+    getShip
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShipDetailsContainer);
