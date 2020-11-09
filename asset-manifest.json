@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/spaceX/static/css/main.6df46d60.chunk.css",
-    "main.js": "/spaceX/static/js/main.7946b8cd.chunk.js",
-    "main.js.map": "/spaceX/static/js/main.7946b8cd.chunk.js.map",
+    "main.css": "/spaceX/static/css/main.d3cec8bb.chunk.css",
+    "main.js": "/spaceX/static/js/main.ec54c02b.chunk.js",
+    "main.js.map": "/spaceX/static/js/main.ec54c02b.chunk.js.map",
     "runtime-main.js": "/spaceX/static/js/runtime-main.13750f96.js",
     "runtime-main.js.map": "/spaceX/static/js/runtime-main.13750f96.js.map",
     "static/css/2.1216cd76.chunk.css": "/spaceX/static/css/2.1216cd76.chunk.css",
-    "static/js/2.0d030fe7.chunk.js": "/spaceX/static/js/2.0d030fe7.chunk.js",
-    "static/js/2.0d030fe7.chunk.js.map": "/spaceX/static/js/2.0d030fe7.chunk.js.map",
+    "static/js/2.930da79e.chunk.js": "/spaceX/static/js/2.930da79e.chunk.js",
+    "static/js/2.930da79e.chunk.js.map": "/spaceX/static/js/2.930da79e.chunk.js.map",
     "index.html": "/spaceX/index.html",
-    "precache-manifest.854b739d33bd89eb0a771722bcf80828.js": "/spaceX/precache-manifest.854b739d33bd89eb0a771722bcf80828.js",
+    "precache-manifest.fc99c16cb7f6f3b448308880afcca405.js": "/spaceX/precache-manifest.fc99c16cb7f6f3b448308880afcca405.js",
     "service-worker.js": "/spaceX/service-worker.js",
     "static/css/2.1216cd76.chunk.css.map": "/spaceX/static/css/2.1216cd76.chunk.css.map",
-    "static/css/main.6df46d60.chunk.css.map": "/spaceX/static/css/main.6df46d60.chunk.css.map",
-    "static/js/2.0d030fe7.chunk.js.LICENSE.txt": "/spaceX/static/js/2.0d030fe7.chunk.js.LICENSE.txt",
+    "static/css/main.d3cec8bb.chunk.css.map": "/spaceX/static/css/main.d3cec8bb.chunk.css.map",
+    "static/js/2.930da79e.chunk.js.LICENSE.txt": "/spaceX/static/js/2.930da79e.chunk.js.LICENSE.txt",
     "static/media/SpaceX-Logo.svg": "/spaceX/static/media/SpaceX-Logo.6ff54c0f.svg",
     "static/media/slick-theme.css": "/spaceX/static/media/slick.f97e3bbf.svg",
     "static/media/app.scss": "/spaceX/static/media/space.f2b71dad.jpg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.13750f96.js",
     "static/css/2.1216cd76.chunk.css",
-    "static/js/2.0d030fe7.chunk.js",
-    "static/css/main.6df46d60.chunk.css",
-    "static/js/main.7946b8cd.chunk.js"
+    "static/js/2.930da79e.chunk.js",
+    "static/css/main.d3cec8bb.chunk.css",
+    "static/js/main.ec54c02b.chunk.js"
   ]
 }
