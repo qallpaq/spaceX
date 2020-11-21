@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import './header-menu-mobile.scss';
 
 
-const HeaderMenuMobile = ({menu, closeMenu}) => {
+const HeaderMenuMobile = ({menu, closeMenu, links}) => {
     return (
         <div className={`header-menu-mobile ${menu && 'active'}`}>
             <div className="container">
@@ -13,36 +13,17 @@ const HeaderMenuMobile = ({menu, closeMenu}) => {
                             closeMenu();
                         }
                     }}>
-
-                    <li className='header-link-mobile'>
-                        <Link to='/'>
-                            <span className='header-link-mobile__item'>HOME</span>
-                        </Link>
-                    </li>
-
-                    <li className='header-link-mobile'>
-                        <Link to='/rockets/'>
-                            <span className='header-link-mobile__item'>ROCKETS</span>
-                        </Link>
-                    </li>
-
-                    <li className='header-link-mobile'>
-                        <Link to='/dragons/'>
-                            <span className='header-link-mobile__item'>DRAGONS</span>
-                        </Link>
-                    </li>
-
-                    <li className='header-link-mobile'>
-                        <Link to='/ships/'>
-                            <span className='header-link-mobile__item'>SHIPS</span>
-                        </Link>
-                    </li>
-
-                    <li className='header-link-mobile'>
-                        <Link to='/contact/'>
-                            <span className='header-link-mobile__item'>CONTACT</span>
-                        </Link>
-                    </li>
+                    {
+                        links.map(el => {
+                            return (
+                                <li className='header-link-mobile' key={el.id}>
+                                    <Link to={el.link}>
+                                        <span className='header-link-mobile__item'>{el.page}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
             </div>
         </div>

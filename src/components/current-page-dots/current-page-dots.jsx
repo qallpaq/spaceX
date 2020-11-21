@@ -1,9 +1,10 @@
 import React from "react";
 import './current-page-dots.scss';
-import {connect} from "react-redux";
+import {useSelectorContext} from "../context/selector-context/selector-context";
 
 
-const CurrentPageDots = ({currentPage}) => {
+const CurrentPageDots = () => {
+    const {currentPage} = useSelectorContext()
     const dots = [1, 2, 3, 4, 5];
 
     return (
@@ -12,7 +13,7 @@ const CurrentPageDots = ({currentPage}) => {
                 dots.map(dot => {
                     return (
                         <div key={dot}
-                             className={`current-page-dots__item ${currentPage === dot ? 'active' : null}`}>
+                             className={`current-page-dots__item ${currentPage === dot && 'active'}`}>
                             {dot}
                         </div>
                     )
@@ -22,8 +23,5 @@ const CurrentPageDots = ({currentPage}) => {
     );
 };
 
-const mapStateToProps = ({basic: {currentPage}}) => {
-    return {currentPage}
-};
 
-export default connect(mapStateToProps)(CurrentPageDots);
+export default CurrentPageDots;

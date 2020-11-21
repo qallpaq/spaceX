@@ -1,9 +1,11 @@
 import React from "react";
 import './current-page-number.scss';
-import {connect} from "react-redux";
+import {useSelectorContext} from "../context/selector-context/selector-context";
 
 
-const CurrentPageNumber = ({currentPage}) => {
+const CurrentPageNumber = () => {
+    const {currentPage} = useSelectorContext()
+
     return (
         <div className='current-page-number'>
             <span className='current-page-title'>0{currentPage}</span> / 05
@@ -12,8 +14,4 @@ const CurrentPageNumber = ({currentPage}) => {
 };
 
 
-const mapStateToProps = ({basic: {currentPage}}) => {
-    return {currentPage}
-};
-
-export default connect(mapStateToProps)(CurrentPageNumber);
+export default CurrentPageNumber;

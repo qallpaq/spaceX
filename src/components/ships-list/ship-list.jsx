@@ -4,7 +4,6 @@ import './ship-list.scss';
 
 
 const ShipList = ({ships, setPage, currentPage}) => {
-
     const arrayForButtons = [1, 2];
 
     return (
@@ -26,7 +25,7 @@ const ShipList = ({ships, setPage, currentPage}) => {
                 {
                     arrayForButtons.map(el => {
                         return (
-                            <button className={`ship__list-button ${currentPage === el ? 'active' : null}`}
+                            <button className={`ship__list-button ${currentPage === el && 'active'}`}
                                     onClick={() => setPage(el)}
                                     key={el}>
                                 {el}

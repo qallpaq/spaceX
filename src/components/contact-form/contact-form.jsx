@@ -1,86 +1,34 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import './contact-form.scss';
 import {setCurrentPage} from "../../actions";
-import {connect} from "react-redux";
-import {AlertContext} from "../context/alert/alert-context";
-import {Alert} from "../alert/alert";
+import {useDispatch} from "react-redux";
+import ContactFormItem from "./contact-form-item";
 
 
-const ContactForm = ({setCurrentPage}) => {
+const ContactForm = () => {
     useEffect(() => {
-        setCurrentPage(5);
+        dispatch(setCurrentPage(5));
     }, []);
 
-    const alert = useContext(AlertContext);
-
-    const [name, setName] = useState('');
-    const [mail, setMail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [text, setText] = useState('');
-
-    const onSubmit = (e) => {
-        e.preventDefault()
-
-        if (name && mail && phone && text) {
-            alert.show('Your message sent to spaceX!', 'success')
-            setName('')
-            setMail('')
-            setPhone('')
-            setText('')
-        } else {
-            alert.show('Fill in ALL the fields!')
-        }
-    };
+    const dispatch = useDispatch()
 
     return (
-        <form className='contact' onSubmit={onSubmit}>
-            <Alert/>
+        <form className='contact'>
             <div className='contact__info'>
-                <div className="contact__info-item">
-                    <div className="contact__item-text">
-                        <div className="contact__item-title">e-mail</div>
-                        <div className="contact__item-subtitle">spacex@gmail.com</div>
-                    </div>
-                </div>
-
-                <div className="contact__info-item">
-                    <div className="contact__item-text">
-                        <div className="contact__item-title">phone</div>
-                        <div className="contact__item-subtitle">8-800-555-35-35</div>
-                    </div>
-                </div>
-
-                <div className="contact__info-item">
-                    <div className="contact__item-text">
-                        <div className="contact__item-title">address</div>
-                        <div className="contact__item-subtitle">69LMAO Street Pe, D.ick</div>
-                    </div>
-                </div>
+                <ContactFormItem title={'e-mail'} subtitle={'spacex@gmail.com'}/>
+                <ContactFormItem title={'phone'} subtitle={'8-800-555-35-35'}/>
+                <ContactFormItem title={'address'} subtitle={'69LMAO Street Pe, D.ick'}/>
             </div>
 
             <div className='contact__content'>
                 <div className="contact__content-inputs">
-                    <input className="contact__input"
-                           placeholder='NAME'
-                           value={name}
-                           onChange={(e) => setName(e.target.value)}/>
-
-                    <input className="contact__input"
-                           placeholder='E-MAIL'
-                           value={mail}
-                           onChange={(e) => setMail(e.target.value)}/>
-
-                    <input className="contact__input"
-                           placeholder='PHONE'
-                           value={phone}
-                           onChange={(e) => setPhone(e.target.value)}/>
+                    <input className="contact__input" placeholder='NAME'/>
+                    <input className="contact__input" placeholder='E-MAIL'/>
+                    <input className="contact__input" placeholder='PHONE'/>
                 </div>
 
                 <div className="contact__content-submit">
-                    <textarea className='contact__content-text'
-                              placeholder='MESSAGE'
-                              value={text}
-                              onChange={(e) => setText(e.target.value)}/>
+                    <textarea className='contact__content-text' placeholder='MESSAGE'/>
                     <button className='contact__content-btn'>send</button>
                 </div>
             </div>
@@ -89,12 +37,4 @@ const ContactForm = ({setCurrentPage}) => {
 };
 
 
-const mapStateToProps = () => {
-    return {}
-};
-
-const mapDispatchToProps = {
-    setCurrentPage
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
+export default ContactForm;

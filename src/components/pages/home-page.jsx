@@ -1,13 +1,15 @@
 import React, {useEffect} from "react";
 import './home-page.scss';
 import {setCurrentPage} from "../../actions";
-import {connect} from "react-redux";
+import {useDispatch} from "react-redux";
 
 
-const HomePage = ({setCurrentPage}) => {
+const HomePage = () => {
     useEffect(() => {
-        setCurrentPage(1);
+        dispatch(setCurrentPage(1));
     }, []);
+
+    const dispatch = useDispatch()
 
     return (
         <div className='home-page'>
@@ -16,12 +18,4 @@ const HomePage = ({setCurrentPage}) => {
     );
 };
 
-const mapStateToProps = () => {
-    return {}
-};
-
-const mapDispatchToProps = {
-    setCurrentPage
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default HomePage;
