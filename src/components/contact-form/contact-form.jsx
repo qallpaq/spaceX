@@ -7,13 +7,13 @@ import ContactFormItem from "./contact-form-item";
 
 const ContactForm = () => {
     useEffect(() => {
-        dispatch(setCurrentPage(5));
-    }, []);
+        dispatch(setCurrentPage(5))
+    }, [])
 
     const dispatch = useDispatch()
 
     return (
-        <form className='contact'>
+        <form className='contact' onSubmit={(e) => e.preventDefault()}>
             <div className='contact__info'>
                 <ContactFormItem title={'e-mail'} subtitle={'spacex@gmail.com'}/>
                 <ContactFormItem title={'phone'} subtitle={'8-800-555-35-35'}/>
