@@ -22,13 +22,13 @@ const ContactForm = () => {
 
             <div className='contact__content'>
                 <div className="contact__content-inputs">
-                    <input className="contact__input" placeholder='NAME'/>
-                    <input className="contact__input" placeholder='E-MAIL'/>
-                    <input className="contact__input" placeholder='PHONE'/>
+                    <input className="contact__input" placeholder='NAME' required/>
+                    <input className="contact__input" placeholder='E-MAIL' required/>
+                    <input className="contact__input" placeholder='PHONE' required/>
                 </div>
 
                 <div className="contact__content-submit">
-                    <textarea className='contact__content-text' placeholder='MESSAGE'/>
+                    <textarea className='contact__content-text' placeholder='MESSAGE' required/>
                     <button className='contact__content-btn'>send</button>
                 </div>
             </div>

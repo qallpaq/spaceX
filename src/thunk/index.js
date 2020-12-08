@@ -20,6 +20,10 @@ const getItems = (getData, currentPage, itemsLoaded) => (currentPageForShips) =>
             dispatch(itemsLoaded(res));
             dispatch(toggleIsFetching(false));
         })
+        .catch(e => {
+            alert(e)
+            dispatch(toggleIsFetching(false));
+        })
 };
 
 export const getRockets = getItems(spaceServer.getAllRockets, 2, rocketsLoaded);
