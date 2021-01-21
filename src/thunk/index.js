@@ -12,18 +12,18 @@ import SpaceServer from "../services/space-server";
 
 const spaceServer = new SpaceServer();
 
-const getItems = (getData, currentPage, itemsLoaded) => (currentPageForShips) => (dispatch) => {
+const getItems = (getData, currentPage, itemsLoaded) => (currentPageForShips) => async (dispatch) => {
     dispatch(setCurrentPage(currentPage));
     dispatch(toggleIsFetching(true));
-    getData(currentPageForShips)
-        .then(res => {
-            dispatch(itemsLoaded(res));
-            dispatch(toggleIsFetching(false));
-        })
-        .catch(e => {
-            alert(e)
-            dispatch(toggleIsFetching(false));
-        })
+
+    try {
+        const response = await getData(currentPageForShips)
+        dispatch(itemsLoaded(response));
+        dispatch(toggleIsFetching(false));
+    } catch (e) {
+        alert(e)
+        dispatch(toggleIsFetching(false));
+    }
 };
 
 export const getRockets = getItems(spaceServer.getAllRockets, 2, rocketsLoaded);
